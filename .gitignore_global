@@ -1,0 +1,5 @@
+node_modules
+colors
+ftplugin
+*.swp
+.netrwhist
