@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# PATH ~/dotfiles
+DOTFILES=$(ls -a ~/dotfiles | awk '/^\.[a-z]+/')
+
+for DOTFILE in ${DOTFILES[@]}
+do
+	LINK_PATH=~/${DOTFILE}
+	unlink ${LINK_PATH}
+done
+
