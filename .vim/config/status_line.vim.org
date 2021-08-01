@@ -1,0 +1,18 @@
+" status line
+
+let s:ctx = {
+      \   'mode_map': {
+      \     'n': 'normal', 'i': 'insert', 'R': 'replace', 'v': 'visual', 'V': 'visual', "\<C-v>": 'visual',
+      \     'c': 'command', 's': 'select', 'S': 'select', "\<C-s>": 'select', 't': 'terminal'
+      \   },
+      \ }
+
+function! CurrentMode() abort
+    return get(s:ctx.mode_map, mode(), '')
+endfunction
+
+
+set statusline=%!SetStatusLine()
+function! SetStatusLine()
+    return ' ' . CurrentMode() . '%#StatusLine# %r %f %m %= [%{&fileformat}] %y'
+endfunction
