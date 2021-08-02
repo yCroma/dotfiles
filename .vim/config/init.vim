@@ -25,8 +25,16 @@ if has("autocmd")
     filetype indent on
     "sw=shiftwidth, sts=softtabstop, ts=tabstop, et=expandtabの略
     autocmd FileType json        setlocal sw=2 sts=2 ts=2 et
-    autocmd FileType md          setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType markdown    setlocal sw=2 sts=2 ts=2 et
     autocmd FileType sh          setlocal sw=4 sts=4 ts=4 et
     autocmd FileType tmux        setlocal sw=4 sts=4 ts=4 et
     autocmd FileType vim	       setlocal sw=2 sts=2 ts=2 et
+endif
+
+" folding
+if has("autocmd")
+    "ファイルタイプの検索を有効にする
+    filetype plugin on
+    autocmd FileType tmux        setlocal foldmethod=marker
+    autocmd FileType zsh         setlocal foldmethod=marker
 endif
