@@ -15,3 +15,7 @@ nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " <C-c> to <Esc>
 inoremap <C-c> <Esc>
+
+" switch window
+nnoremap <space>r <C-w>r
+nnoremap <space>R <C-w>R
