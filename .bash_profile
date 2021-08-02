@@ -33,5 +33,5 @@ function reload {
 
 PROMPT_COMMAND='reload'. ~/.bashrc
 
-export CLICOLOR=1
-export TERM=xterm-256color
+#export CLICOLOR=1
+#export TERM=xterm-256color
