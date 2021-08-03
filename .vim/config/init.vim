@@ -2,6 +2,8 @@
 syntax enable
 colorscheme minimalist
 
+set showtabline=2
+
 set number
 set nocompatible
 set complete-=i
@@ -29,6 +31,7 @@ if has("autocmd")
     autocmd FileType sh          setlocal sw=4 sts=4 ts=4 et
     autocmd FileType tmux        setlocal sw=4 sts=4 ts=4 et
     autocmd FileType vim	       setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType zsh	       setlocal sw=4 sts=4 ts=4 et
 endif
 
 " folding
