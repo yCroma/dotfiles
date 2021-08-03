@@ -1,6 +1,12 @@
 " install plugin with vim-plug
 
 call plug#begin('~/.vim/ftplugin')
+" tabline
+Plug 'itchyny/lightline.vim'
+
+" buftabline for lightline
+Plug 'mengelbrecht/lightline-bufferline'
+
 " auto-pair
 Plug 'mattn/vim-lexiv'
 
