@@ -1,5 +1,19 @@
 # dotfiles
 
+## alias
+
+tk, tmux kill-session
+pane2, tmux split window
+gread, ghq+fzf でREADME.mdを一覧表示
+glog, ghq+fzf でgit.logを表示
+gfile, ghq+fzf でプロジェクトルートのファイルリスト表示
+vip, CtrlPしながらvimを起動
+
+### TODO
+- [ ] tmux外でgのつくコマンドを叩いた時に、sessionをひらきながら起動する
+- [ ] paneの小サイズ用のコマンドを追加する
+
+
 ## vim
 
 ### requirements
@@ -22,6 +36,12 @@
 |:MakeTable      |vim-maketable           |
 |:MakeTable!     |                        |
 |:UnmakeTable    |                        |
+|:Files          |fzf.vim                 |
+|:GFiles         |                        |
+|:GFiles?        |                        |
+|:Buffers        |                        |
+|:Colors         |                        |
+|:History        |                        |
 |<Leader>s       |easymotion              |
 |<Leader>{j.k}   |                        |
 |<C-e>           |winresizer              |
@@ -30,6 +50,8 @@
 |ds"             |                        |
 
 ## tmux
+
+prefix <C-o>
 
 |command              |mean                        |
 |---------------------|----------------------------|
@@ -63,3 +85,18 @@
 |zsh-autosuggestions    |サジェスト      |
 |zsh-completions        |補完強化?       |
 |zsh-256color           |256色表示にする?|
+
+## ghq
+
+|command       |mean                                    |
+|--------------|----------------------------------------|
+|ghq create url|ローカルでgit initして連携してくれる    |
+|ghq get url   |リモートからリポジトリをクローンしてくる|
+|ghq list      |ghqが管理しているリポジトリのリスト表示 |
+
+## fzf
+
+### requirements
+
+- ripgrep
+- bat
