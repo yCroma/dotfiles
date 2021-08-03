@@ -40,6 +40,10 @@ Plug 'airblade/vim-gitgutter'
 " fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
 
+" fzf
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Popup your buffer
 Plug 'yCroma/pobls.vim'
 
