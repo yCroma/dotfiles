@@ -75,6 +75,7 @@ function cd_ghq_file() {
 
 # alias
 # {{{
+alias pane1="bash ~/dotfiles/.scripts/pane1"
 alias pane2="bash ~/dotfiles/.scripts/pane2"
 alias tks="bash ~/dotfiles/.scripts/tks"
 alias gread=cd_ghq_raedme
