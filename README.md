@@ -50,4 +50,16 @@
 
 ## zsh
 
-test
+### requirements
+
+- zplug
+
+|plugin                 |do              |
+|-----------------------|----------------|
+|zsh-azyng              |非同期処理?     |
+|pure                   |テーマ          |
+|zsh-syntax-highlighting|syntax highlight|
+|zsh-history-substring  |過去履歴?       |
+|zsh-autosuggestions    |サジェスト      |
+|zsh-completions        |補完強化?       |
+|zsh-256color           |256色表示にする?|
