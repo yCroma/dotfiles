@@ -44,7 +44,40 @@ zplug load
 
 # }}}
 
+# functions
+
+# cd_ghq_readme {{{
+function cd_ghq_readme() {
+    local destination_dir="$(ghq root)/$(ghq list | fzf --layout=reverse --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")"
+    if [ -n "$destination_dir" ]; then
+        cd $destination_dir
+    fi
+}
+# }}}
+
+# cd_ghq_log {{{
+function cd_ghq_log() {
+    local destination_dir="$(ghq root)/$(ghq list | fzf --layout=reverse --preview "git --git-dir $(ghq root)/{}/.git log --date=short --pretty=format:'-%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --color")"
+    if [ -n "$destination_dir" ]; then
+        cd $destination_dir
+    fi
+}
+# }}}
+
+# cd_ghq_file {{{
+function cd_ghq_file() {
+    local destination_dir="$(ghq root)/$(ghq list | fzf --layout=reverse --preview "ls -laTp $(ghq root)/{} | tail -n+4 | awk '{print \$9\"/\"\$6\"/\"\$7 \" \" \$10}'")"
+    if [ -n "$destination_dir" ]; then
+        cd $destination_dir
+    fi
+}
+# }}}
+
 # alias
 # {{{
 alias pane2="bash ~/dotfiles/.scripts/pane2"
 alias tks="bash ~/dotfiles/.scripts/tks"
+alias gread=cd_ghq_raedme
+alias glog=cd_ghq_log
+alias gfile=cd_ghq_file
+# }}}
