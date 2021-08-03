@@ -46,5 +46,5 @@ zplug load
 
 # alias
 # {{{
-alias pane="bash ~/dotfiles/.scripts/pane"
-alias tk="bash ~/dotfiles/.scripts/tk"
+alias pane2="bash ~/dotfiles/.scripts/pane2"
+alias tks="bash ~/dotfiles/.scripts/tks"
