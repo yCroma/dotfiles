@@ -44,7 +44,7 @@ zplug load
 
 # }}}
 
-
-#autoload -U promptinit; promptinit
-#ztyle :user:host:path:git:branch:git:dirty:prompt
-#prompt pure
+# alias
+# {{{
+alias pane="bash ~/dotfiles/.scripts/pane"
+alias tk="bash ~/dotfiles/.scripts/tk"
