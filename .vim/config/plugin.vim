@@ -1,6 +1,9 @@
 " install plugin with vim-plug
 
 call plug#begin('~/.vim/ftplugin')
+" colorsheme
+Plug 'rafi/awesome-vim-colorschemes'
+
 " tabline
 Plug 'itchyny/lightline.vim'
 
