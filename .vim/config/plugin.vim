@@ -50,4 +50,7 @@ Plug 'yCroma/pobls.vim'
 " preview-markdown
 Plug 'skanehira/preview-markdown.vim'
 
+" task runner
+Plug 'thinca/vim-quickrun'
+
 call plug#end()
