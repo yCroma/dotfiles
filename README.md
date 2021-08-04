@@ -2,12 +2,14 @@
 
 ## alias
 
-tk, tmux kill-session
-pane2, tmux split window
-gread, ghq+fzf でREADME.mdを一覧表示
-glog, ghq+fzf でgit.logを表示
-gfile, ghq+fzf でプロジェクトルートのファイルリスト表示
-vip, CtrlPしながらvimを起動
+|alias|command                                         |
+|-----|------------------------------------------------|
+|tk   |tmux kill-session                               |
+|pane2|tmux split window                               |
+|gread|ghq+fzf でREADME.mdを一覧表示                   |
+|glog |ghq+fzf でgit.logを表示                         |
+|gfile|ghq+fzf でプロジェクトルートのファイルリスト表示|
+|vip  |CtrlPしながらvimを起動                          |
 
 ### TODO
 - [ ] tmux外でgのつくコマンドを叩いた時に、sessionをひらきながら起動する
