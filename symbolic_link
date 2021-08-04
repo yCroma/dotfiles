@@ -8,7 +8,17 @@ GHQ_DOTFILES_PATH=${GHQ_ROOT}/${DOTFILE_REPOSITORY}
 if [[ -e ${GHQ_DOTFILES_PATH} ]]
 then
     echo "dotfiles is managed by ghq"
-    ln -sfv ${GHQ_DOTFILES_PATH} ${HOME}
+        bash ./unlink
+        echo "old links were removed"
+    if [ -L ~/dotfiles ]; then
+        unlink ~/dotfiles
+        echo "dotfiles was unlinked"
+    fi
+	if [ -e ~/dotfiles ]; then
+		rm -rf ~/dotfiles
+        echo "old dotfiles was removed"
+	fi
+    ln -sfv ${GHQ_DOTFILES_PATH} ${HOME}/dotfiles
 fi
 
 # PATH ~/dotfiles
