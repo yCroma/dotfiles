@@ -1,5 +1,16 @@
 #!/bin/bash
 
+# ghqの管理下ならdotfiles自体をシンボリックリンクで生成する
+GHQ_ROOT=~/src
+DOTFILE_REPOSITORY=github.com/yCroma/dotfiles
+GHQ_DOTFILES_PATH=${GHQ_ROOT}/${DOTFILE_REPOSITORY}
+
+if [[ -e ${GHQ_DOTFILES_PATH} ]]
+then
+    echo "dotfiles is managed by ghq"
+    ln -sfv ${GHQ_DOTFILES_PATH} ${HOME}
+fi
+
 # PATH ~/dotfiles
 DOTFILES=$(ls -a ~/dotfiles | awk '/^\.[a-z]+/')
 
