@@ -27,29 +27,29 @@
   - mdcat
     - `brew install mdcat`
 
-|commands        |plugins                 |
-|----------------|------------------------|
-|:PlugInstall    |VimPlug                 |
-|:PlugUpdate     |                        |
-|:PlugClean      |                        |
-|:XTermColorTable|show terminal 256 colors|
-|:SyntaxInfo     |SyntaxInfo              |
-|:PreviewMarkdown|preview-markdown        |
-|:MakeTable      |vim-maketable           |
-|:MakeTable!     |                        |
-|:UnmakeTable    |                        |
-|:Files          |fzf.vim                 |
-|:GFiles         |                        |
-|:GFiles?        |                        |
-|:Buffers        |                        |
-|:Colors         |                        |
-|:History        |                        |
-|<Leader>s       |easymotion              |
-|<Leader>{j.k}   |                        |
-|<C-e>           |winresizer              |
-|<C-p>           |CtrlP                   |
-|cs"'            |surround.vim            |
-|ds"             |                        |
+commands,plugins
+:PlugInstall,VimPlug
+:PlugUpdate,
+:PlugClean,
+:XTermColorTable,show terminal 256 colors
+:SyntaxInfo,SyntaxInfo
+:PreviewMarkdown,preview-markdown
+:MakeTable,vim-maketable
+:MakeTable!,
+:UnmakeTable,
+:Files,fzf.vim
+:GFiles,
+:GFiles?,
+:Buffers,
+:Colors,
+:History,
+<Leader>s,easymotion
+<Leader>{j.k},
+<C-e>,winresizer
+<C-p>,CtrlP
+cs"',surround.vim
+ds",
+<Space>qr,quickrun.vim
 
 ## tmux
 
