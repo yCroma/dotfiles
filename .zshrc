@@ -48,7 +48,7 @@ zplug load
 # {{{
 alias pane1="bash ~/dotfiles/.scripts/pane1"
 alias pane2="bash ~/dotfiles/.scripts/pane2"
-alias tks="bash ~/dotfiles/.scripts/tks"
+alias tks="tmux kill-session"
 alias vip="vim -c CtrlP"
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
