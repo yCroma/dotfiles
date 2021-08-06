@@ -2,7 +2,7 @@
 
 call plug#begin('~/.vim/ftplugin')
 " colorsheme
-Plug 'rafi/awesome-vim-colorschemes'
+Plug 'flazz/vim-colorschemes'
 
 " tabline
 Plug 'itchyny/lightline.vim'
