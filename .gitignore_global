@@ -3,3 +3,4 @@ colors
 ftplugin
 *.swp
 .netrwhist
+.vim/view/
