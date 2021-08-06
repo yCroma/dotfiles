@@ -1,0 +1,20 @@
+#!/bin/zsh
+
+destination_dir="$(ghq root)/$(ghq list | fzf --layout=reverse --height 40% --border)"
+
+repo_name=${destination_dir##*/}
+
+if [ -n "$destination_dir" ]; then
+    echo $destination_dir
+
+    if [ -z ${TMUX}]
+    then
+        echo "dive into tmux"
+        tmux new -A -s $repo_name -c $destination_dir
+    else
+        echo "in tmux now"
+        echo ${destination_dir##*/}
+        tmux new-session -s $repo_name -d -c $destination_dir
+        tmux switch-client -t $repo_name
+    fi
+fi

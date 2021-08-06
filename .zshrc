@@ -57,6 +57,7 @@ alias vip="vim -c CtrlP"
 alias ide='vim -c "CocCommand explorer --preset ide"'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
+alias glist="zsh ~/dotfiles/.scripts/ghq/glist"
 alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
 alias cdgr="cd-gitroot"
 # }}}
