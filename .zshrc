@@ -50,6 +50,7 @@ zplug load
 # alias
 # {{{
 alias pane1="bash ~/dotfiles/.scripts/pane1"
+alias pane11="bash ~/dotfiles/.scripts/pane11"
 alias pane2="bash ~/dotfiles/.scripts/pane2"
 alias tks="tmux kill-session"
 alias tkw="tmux kill-window"
