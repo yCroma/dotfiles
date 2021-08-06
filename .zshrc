@@ -24,6 +24,9 @@ zplug "zsh-users/zsh-completions"
 # 256色表示にする
 zplug "chrissicool/zsh-256color"
 
+# cd-gitroot でgit rootへ移動できる
+zplug "mollifier/cd-gitroot"
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
 	printf "Install? [y/N]: "
@@ -55,4 +58,5 @@ alias ide='vim -c "CocCommand explorer --preset ide"'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
 alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
+alias cdgr="cd-gitroot"
 # }}}
