@@ -1,0 +1,11 @@
+#!/bin/bash
+
+brew install mdcat ghq fzf ripgrep bat
+
+if [! -e ~/src ]
+then
+    # for ghq root
+    mkdir ~/src
+fi
+
+bash ./ghqinit.sh
