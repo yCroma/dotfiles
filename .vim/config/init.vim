@@ -41,3 +41,9 @@ if has("autocmd")
     autocmd FileType tmux        setlocal foldmethod=marker
     autocmd FileType zsh         setlocal foldmethod=marker
 endif
+
+" Save fold settings.
+autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
+autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
+" Don't save options.
+set viewoptions-=options'
