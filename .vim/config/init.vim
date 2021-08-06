@@ -1,6 +1,6 @@
 " syntax highlight
 syntax enable
-colorscheme minimalist
+colorscheme Tomorrow-Night-Bright
 
 set showtabline=2
 
