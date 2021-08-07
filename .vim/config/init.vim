@@ -26,12 +26,13 @@ if has("autocmd")
     "ファイルタイプに合わせたインデントを利用
     filetype indent on
     "sw=shiftwidth, sts=softtabstop, ts=tabstop, et=expandtabの略
-    autocmd FileType json        setlocal sw=2 sts=2 ts=2 et
-    autocmd FileType markdown    setlocal sw=2 sts=2 ts=2 et
-    autocmd FileType sh          setlocal sw=4 sts=4 ts=4 et
-    autocmd FileType tmux        setlocal sw=4 sts=4 ts=4 et
-    autocmd FileType vim	       setlocal sw=2 sts=2 ts=2 et
-    autocmd FileType zsh	       setlocal sw=4 sts=4 ts=4 et
+    autocmd BufNewFile, BufRead *.json  setlocal sw=2 sts=2 ts=2 et
+    autocmd BufNewFile, BufRead *.js    setlocal sw=2 sts=2 ts=2 et
+    autocmd BufNewFile, BufRead *.md    setlocal sw=2 sts=2 ts=2 et
+    autocmd BufNewFile, BufRead *.sh    setlocal sw=4 sts=4 ts=4 et
+    autocmd BufNewFile, BufRead *.conf  setlocal sw=4 sts=4 ts=4 et
+    autocmd BufNewFile, BufRead *.vim	  setlocal sw=2 sts=2 ts=2 et
+    autocmd BufNewFile, BufRead *.zsh	  setlocal sw=4 sts=4 ts=4 et
 endif
 
 " folding
