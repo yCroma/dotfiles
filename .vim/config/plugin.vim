@@ -1,14 +1,17 @@
 " install plugin with vim-plug
 
 call plug#begin('~/.vim/ftplugin')
-" colorsheme
-Plug 'flazz/vim-colorschemes'
 
-" tabline
+" colorsheme {{{
+Plug 'flazz/vim-colorschemes'
+" }}}
+
+" tabline {{{
 Plug 'itchyny/lightline.vim'
 
 " buftabline for lightline
 Plug 'mengelbrecht/lightline-bufferline'
+" }}}
 
 " auto-pair
 Plug 'mattn/vim-lexiv'
