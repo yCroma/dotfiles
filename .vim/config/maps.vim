@@ -10,6 +10,10 @@ nnoremap <C-h> <C-w>h
 noremap j gj
 noremap k gk
 
+" move buffer into tabline
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bpre<CR>
+
 " push Esc twice, stop hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
