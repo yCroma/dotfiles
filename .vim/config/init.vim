@@ -28,6 +28,7 @@ if has("autocmd")
     "sw=shiftwidth, sts=softtabstop, ts=tabstop, et=expandtabの略
     autocmd FileType json        setlocal sw=2 sts=2 ts=2 et
     autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType typescript  setlocal sw=2 sts=2 ts=2 et
     autocmd FileType markdown    setlocal sw=2 sts=2 ts=2 et
     autocmd FileType sh          setlocal sw=4 sts=4 ts=4 et
     autocmd FileType tmux        setlocal sw=4 sts=4 ts=4 et
