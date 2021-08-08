@@ -8,6 +8,7 @@
     "vue",
     "markdown"
   ],
+  "eslint.autoFixOnSave": true,
 	"explorer.file.showHiddenFiles": false,
   "explorer.file.hiddenRules": {
     "filenames": [
