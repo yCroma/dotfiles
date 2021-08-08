@@ -1,4 +1,6 @@
 {
+  "suggest.labelMaxLength": 300,
+  "coc.preferences.formatOnSaveFiletypes": ["typescript", "javascript", "html", "css", "vue"],
 	"explorer.file.showHiddenFiles": false,
   "explorer.file.hiddenRules": {
     "filenames": [
