@@ -1,3 +1,7 @@
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
 # zplug
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
@@ -61,4 +65,6 @@ alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
 alias glist="zsh ~/dotfiles/.scripts/ghq/glist"
 alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
 alias cdgr="cd-gitroot"
+
+alias ls="ls -FG"
 # }}}
