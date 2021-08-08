@@ -21,8 +21,9 @@ let g:coc_explorer_global_presets = {
 \   },
 \   'dotfiles': {
 \     'root-uri': '~/dotfiles',
+\     'position': 'right',
+\     'width': 60,
 \     'sources': [
-\       {'name': 'buffer', 'expand': v:true},
 \       {'name': 'file', 'expand': v:true}
 \     ],
 \   },
