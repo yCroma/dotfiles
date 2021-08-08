@@ -1,6 +1,6 @@
 " coc 全般のコンフィグ
 
-" coc-explorer
+" coc-explorer {{{
 let g:coc_explorer_global_presets = {
 \   'ide': {
 \     'position': 'right',
@@ -66,4 +66,4 @@ nnoremap <space>el :CocList explPresets
 autocmd User CocDiagnosticChange,CocGitStatusChange
     \ call CocActionAsync('runCommand', 'explorer.doAction', 'closest', ['refresh'])
 
-
+" }}}
