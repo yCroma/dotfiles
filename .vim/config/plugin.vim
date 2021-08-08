@@ -14,7 +14,7 @@ Plug 'mengelbrecht/lightline-bufferline'
 " }}}
 
 " prettier
-Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown', 'vue', 'yaml', 'html']}
+" Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown', 'vue', 'yaml', 'html']}
 
 " auto-pair
 Plug 'mattn/vim-lexiv'
