@@ -15,6 +15,7 @@ Plug 'itchyny/lightline.vim'
 " }}}
 
 " prettier
+" now i use coc-prettier
 " Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown', 'vue', 'yaml', 'html']}
 
 " filer
