@@ -69,4 +69,7 @@ Plug 'skanehira/preview-markdown.vim'
 " task runner
 Plug 'thinca/vim-quickrun'
 
+" smurt indent with backslash
+Plug 'lambdalisue/vim-backslash'
+
 call plug#end()
