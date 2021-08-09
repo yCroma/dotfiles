@@ -12,44 +12,33 @@ nmap <silent> gr <Plug>(coc-references)
 " coc-explorer {{{
 let g:coc_explorer_global_presets = {
 \   'ide': {
-\     'position': 'right',
-\     'width': 60,
+\     'position': 'left',
+\     'width': 35,
 \     'sources': [
+\       {'name': 'buffer', 'expand': v:true},
 \       {'name': 'file', 'expand': v:true}
 \     ],
 \   },
 \   'dotfiles': {
 \     'root-uri': '~/dotfiles',
-\     'position': 'right',
-\     'width': 60,
+\     'position': 'left',
+\     'width': 35,
 \     'sources': [
+\       {'name': 'buffer', 'expand': v:true},
 \       {'name': 'file', 'expand': v:true}
 \     ],
 \   },
 \   'buffer': {
-\     'position': 'left',
-\     'width': 45,
+\     'position': 'right',
+\     'width': 60,
 \     'sources': [
 \       {'name': 'buffer', 'expand': v:true},
 \     ],
 \   },
 \   '.vim': {
-\     'position': 'right',
-\     'root-uri': '~/.vim',
-\     'width': 75,
-\     'sources': [
-\       {'name': 'file', 'expand': v:true}
-\     ]
-\   },
-\   'home': {
-\     'root-uri': '~/',
-\     'sources': [
-\       {'name': 'buffer', 'expand': v:true},
-\       {'name': 'file', 'expand': v:true}
-\     ],
-\   },
-\   'full': {
 \     'position': 'left',
+\     'root-uri': '~/.vim',
+\     'width': 35,
 \     'sources': [
 \       {'name': 'buffer', 'expand': v:true},
 \       {'name': 'file', 'expand': v:true}
@@ -64,9 +53,7 @@ let g:coc_explorer_global_presets = {
 nnoremap <space>ei :CocCommand explorer --preset ide<CR>
 nnoremap <space>ed :CocCommand explorer --preset dotfiles<CR>
 nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
-nnoremap <space>ef :CocCommand explorer --preset full<CR>
 nnoremap <space>ev :CocCommand explorer --preset .vim<CR>
-nnoremap <space>eh :CocCommand explorer --preset home<CR>
 nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
 
 " List all presets
