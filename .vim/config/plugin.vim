@@ -10,7 +10,8 @@ Plug 'flazz/vim-colorschemes'
 Plug 'itchyny/lightline.vim'
 
 " buftabline for lightline
-Plug 'mengelbrecht/lightline-bufferline'
+" now i use tab
+"Plug 'mengelbrecht/lightline-bufferline'
 " }}}
 
 " prettier
