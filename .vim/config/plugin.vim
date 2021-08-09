@@ -50,6 +50,8 @@ Plug 'easymotion/vim-easymotion'
 
 " git-diff
 Plug 'airblade/vim-gitgutter'
+" use for lightline to display FugitiveHead
+Plug 'tpope/vim-fugitive'
 
 " fuzzy finder
 Plug 'ctrlpvim/ctrlp.vim'
