@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# set tmux panes for ide
+
+if [ "$#" -eq 0 ]; then
+    echo "引数を入力してください: {1, 11, 2}"
+else
+    case $1 in
+        1)
+            tmux split-window -v
+            tmux resize-pane -D 6
+            tmux select-pane -t 0
+            clear
+            ;;
+        11)
+            tmux split-window -v
+            tmux split-window -v
+            tmux select-pane -t 0
+            clear
+            ;;
+
+        2)
+            tmux split-window -v
+            tmux resize-pane -D 6
+            tmux split-window -h
+            tmux select-pane -t 0
+            clear
+            ;;
+        *)
+            echo [ERROR] "$1" は設定されていない引数です。
+            ;;
+    esac
+fi

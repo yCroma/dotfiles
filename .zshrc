@@ -53,6 +53,7 @@ zplug load
 
 # alias
 # {{{
+alias pane="bash ~/dotfiles/.scripts/pane"
 alias pane1="bash ~/dotfiles/.scripts/pane1"
 alias pane11="bash ~/dotfiles/.scripts/pane11"
 alias pane2="bash ~/dotfiles/.scripts/pane2"
