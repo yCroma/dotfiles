@@ -1,3 +1,5 @@
+# ENV
+export EDITOR=vim
 # Use modern completion system
 autoload -Uz compinit
 compinit
