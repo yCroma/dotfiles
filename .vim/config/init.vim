@@ -19,6 +19,11 @@ set splitbelow
 set backspace=2
 set hlsearch
 
+" filetype
+if has("autocmd")
+  autocmd BufNewFile, BufRead *.cson set filetype=json
+endif
+
 " indent
 if has("autocmd")
     "ファイルタイプの検索を有効にする
