@@ -6,7 +6,7 @@ let g:markbar_num_lines_context = {
       \ 'around_local': 2,
       \ 'around_file': 0, 
       \ }
-nmap <Space>ms <Plug>ToggleMarkbar
+nnoremap <Space>ms <Plug>ToggleMarkbar
 
 " the following are unneeded if ToggleMarkbar is mapped
 " nmap <Leader>mo <Plug>OpenMarkbar

@@ -1,4 +1,4 @@
-nmap <Space>ml :SignatureListBufferMarks<CR>
-nmap <Space>mt :SignatureToggleSigns<CR>
+nnoremap <Space>ml :SignatureListBufferMarks<CR>
+nnoremap <Space>mt :SignatureToggleSigns<CR>
 let g:SignatureEnabledAtStartup = 1
-nmap <Space>mr :SignatureRefresh<CR>
+nnoremap <Space>mr :SignatureRefresh<CR>
