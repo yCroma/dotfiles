@@ -78,8 +78,4 @@ function! s:smooth_scroll(fn) abort
   {'repeat' : &scroll/3})
 endfunction
 
-nnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
-nnoremap <silent> <C-d> <cmd>call <SID>smooth_scroll('down')<CR>
-vnoremap <silent> <C-u> <cmd>call <SID>smooth_scroll('up')<CR>
-vnoremap <silent> <C-d> <cmd>call <SID>smooth_scroll('down')<CR>
 " }}}
