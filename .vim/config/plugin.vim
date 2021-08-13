@@ -37,8 +37,14 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " window resizing
 Plug 'simeji/winresizer'
 
+" repeat complex commands
+Plug 'tpope/vim-repeat'
+
 " change quotation
 Plug 'tpope/vim-surround'
+
+" replace
+Plug 'kqito/vim-easy-replace'
 
 " Terminal Color Table
 Plug 'guns/xterm-color-table.vim'
