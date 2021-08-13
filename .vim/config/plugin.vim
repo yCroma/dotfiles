@@ -73,4 +73,8 @@ Plug 'thinca/vim-quickrun'
 " smurt indent with backslash
 Plug 'lambdalisue/vim-backslash'
 
+" show marks
+Plug 'kshenoy/vim-signature'
+Plug 'Yilin-Yang/vim-markbar'
+
 call plug#end()
