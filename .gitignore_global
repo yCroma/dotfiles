@@ -4,3 +4,4 @@ ftplugin
 *.swp
 .netrwhist
 .vim/view/
+tmp
