@@ -53,7 +53,7 @@ Plug 'guns/xterm-color-table.vim'
 Plug 'christoomey/vim-tmux-navigator'
 
 " move quic
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 
 " git-diff
 Plug 'airblade/vim-gitgutter'
@@ -77,7 +77,7 @@ Plug 'skanehira/preview-markdown.vim'
 Plug 'thinca/vim-quickrun'
 
 " smurt indent with backslash
-Plug 'lambdalisue/vim-backslash'
+"Plug 'lambdalisue/vim-backslash'
 
 " show marks
 Plug 'kshenoy/vim-signature'
