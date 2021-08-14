@@ -37,6 +37,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " window resizing
 Plug 'simeji/winresizer'
 
+" multiple-cursors
+Plug 'terryma/vim-multiple-cursors'
+
 " repeat complex commands
 Plug 'tpope/vim-repeat'
 
