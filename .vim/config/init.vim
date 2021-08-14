@@ -2,9 +2,11 @@
 syntax enable
 colorscheme Tomorrow-Night-Bright
 
+"set scrolloff=3
+
 set showtabline=2
 
-set number
+set number relativenumber
 set nocompatible
 set complete-=i
 set wildmenu
