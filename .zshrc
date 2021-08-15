@@ -61,6 +61,7 @@ alias pane11="bash ~/dotfiles/.scripts/pane11"
 alias pane2="bash ~/dotfiles/.scripts/pane2"
 alias tks="tmux kill-session"
 alias tkw="tmux kill-window"
+alias tusl="bash ~/dotfiles/.scripts/tusl"
 alias vip="vim -c CtrlP"
 alias ide='vim -c "CocCommand explorer --preset ide"'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
