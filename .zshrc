@@ -33,6 +33,10 @@ zplug "chrissicool/zsh-256color"
 # cd-gitroot でgit rootへ移動できる
 zplug "mollifier/cd-gitroot"
 
+# cd した時に自動でlsしてくれる
+zplug "desyncr/auto-ls"
+AUTO_LS_COMMANDS=(ls)
+
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
 	printf "Install? [y/N]: "
