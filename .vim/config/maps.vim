@@ -6,9 +6,15 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
 
-" move cursor
-noremap j gj
-noremap k gk
+" move cursor and centering
+noremap j gjzz
+noremap k gkzz
+noremap { {zz
+noremap } }zz
+noremap za zazz
+noremap H Hzz
+noremap M Mzz
+noremap L Lzz
 
 " move buffer into tabline
 nnoremap <C-n> :bnext<CR>
