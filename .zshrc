@@ -1,5 +1,20 @@
 # ENV
 export EDITOR=vim
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+export FZF_DEFAULT_OPTS="\
+    --layout=reverse \
+    --info inline \
+    --border \
+    --bind CTRL-B:preview-up,up:preview-up,CTRL-F:preview-down,down:preview-down
+    --preview 'bat \
+        --color=always \
+        --style=numbers,changes,header \
+        --line-range=:100 {}\
+        '\
+    "
+# disabled setting
+#--preview-window down:99% \
+
 # Use modern completion system
 autoload -Uz compinit
 compinit

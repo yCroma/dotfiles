@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-destination_dir="$(ghq root)/$(ghq list | fzf --layout=reverse --height 40% --border)"
+destination_dir="$(ghq root)/$(ghq list | fzf )"
 
 repo_name=${destination_dir##*/}
 

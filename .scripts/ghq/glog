@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-destination_dir="$(ghq root)/$(ghq list | fzf --layout=reverse --height 40% --border --preview "git --git-dir $(ghq root)/{}/.git log --date=short --pretty=format:'-%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --color")"
+destination_dir="$(ghq root)/$(ghq list | fzf --preview "git --git-dir $(ghq root)/{}/.git log --date=short --pretty=format:'-%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --color")"
 
 repo_name=${destination_dir##*/}
 
