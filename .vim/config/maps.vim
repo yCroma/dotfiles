@@ -35,3 +35,14 @@ nnoremap <space>R <C-w>R
 
 " search use verymagic
 nnoremap / /\v
+
+" mapping for terminl
+tnoremap <C-j> <C-w>j
+tnoremap <C-k> <C-w>k
+tnoremap <C-l> <C-w>l
+tnoremap <C-h> <C-w>h
+
+" create tab Terminal
+" nnoremap <silent><Space>t :0tabnew<CR>:terminal ++curwin<CR>
+nnoremap <Space>tv :vert terminal<CR>
+nnoremap <Space>ts :bo terminal<CR>
