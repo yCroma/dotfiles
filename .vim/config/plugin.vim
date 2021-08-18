@@ -85,7 +85,9 @@ Plug 'thinca/vim-quickrun'
 "Plug 'lambdalisue/vim-backslash'
 
 " show marks
-Plug 'kshenoy/vim-signature'
-Plug 'Yilin-Yang/vim-markbar'
+" not used
+"Plug 'kshenoy/vim-signature'
+"Plug 'Yilin-Yang/vim-markbar'
+
 
 call plug#end()
