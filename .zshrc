@@ -1,6 +1,10 @@
-# ENV
+# .zshrc
+
 # source
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# env
+# {{{
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
@@ -46,10 +50,13 @@ export FZF_CTRL_T_OPTS="\
 # }}}
 
 # Use modern completion system
+# {{{
 autoload -Uz compinit
 compinit
+# }}}
 
 # zplug
+# {{{
 source ~/.zplug/init.zsh
 zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
@@ -101,6 +108,7 @@ SAVEHIST=10000
 zplug load
 
 # }}}
+# }}}
 
 # alias
 # {{{
@@ -132,3 +140,6 @@ Vif() {
         --line-range=:100 {}')
 }
 # }}}
+
+# }}}
+
