@@ -1,6 +1,6 @@
 #!/bin/bash
 
-brew install mdcat ghq fzf ripgrep bat
+brew install mdcat ghq fzf ripgrep bat yabai skhd
 
 if [! -e ~/src ]
 then
