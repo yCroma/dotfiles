@@ -5,3 +5,10 @@ ftplugin
 .netrwhist
 .vim/view/
 tmp
+.DS_Store
+.config/coc/extensions/package.json
+.config/coc/extensions/package-lock.json
+.config/coc/list-commands-history.json
+.config/coc/list-explorerFiles-history.json
+.config/coc/list-location-history.json
+.vim/after/
