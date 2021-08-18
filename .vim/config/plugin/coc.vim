@@ -15,8 +15,9 @@ let g:coc_global_extensions = [
       \ 'coc-tsserver',
       \ 'coc-pyright',
       \ 'coc-yaml',
-      \ 'coc-docker',
-      \ 'coc-explorer']
+      \ 'coc-vimlsp',
+      \ 'coc-docker']
+ "     \ 'coc-explorer']
 " }}}
 
 " coc-explorer {{{
@@ -39,11 +40,13 @@ let g:coc_explorer_global_presets = {
 \     ],
 \   },
 \   'buffer': {
-\     'position': 'right',
-\     'width': 60,
+\     'position': 'buffer',
 \     'sources': [
 \       {'name': 'buffer', 'expand': v:true},
+\       {'name': 'file', 'expand': v:true}
 \     ],
+\     'quit-on-open': v:true,
+\     'open-action-strategy': "previousBuffer"
 \   },
 \   '.vim': {
 \     'position': 'left',
@@ -54,17 +57,26 @@ let g:coc_explorer_global_presets = {
 \       {'name': 'file', 'expand': v:true}
 \     ]
 \   },
+\   'tab': {
+\     'position': 'tab',
+\     'sources': [
+\       {'name': 'file', 'expand': v:true}
+\     ],
+\     'quit-on-open': v:true,
+\     'open-action-strategy': 'split',
+\   },
 \   'cocConfig': {
 \      'root-uri': '~/.config/coc',
 \   },
 \ }
 
 " Use preset argument to open it
-nnoremap <space>ei :CocCommand explorer --preset ide<CR>
-nnoremap <space>ed :CocCommand explorer --preset dotfiles<CR>
-nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
-nnoremap <space>ev :CocCommand explorer --preset .vim<CR>
-nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
+"nnoremap <space>ei :CocCommand explorer --preset ide<CR>
+"nnoremap <space>ed :CocCommand explorer --preset dotfiles<CR>
+"nnoremap <space>eb :CocCommand explorer --preset buffer<CR>
+"nnoremap <space>ev :CocCommand explorer --preset .vim<CR>
+"nnoremap <space>ec :CocCommand explorer --preset cocConfig<CR>
+"nnoremap <space>et :CocCommand explorer --preset tab<CR>
 
 " List all presets
 nnoremap <space>el :CocList explPresets
