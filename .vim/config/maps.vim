@@ -12,9 +12,12 @@ noremap k gkzz
 noremap { {zz
 noremap } }zz
 noremap za zazz
+noremap n nzz
+noremap N Nzz
 noremap H Hzz
 noremap M Mzz
 noremap L Lzz
+noremap G Gzz
 
 " move buffer into tabline
 nnoremap <C-n> :bnext<CR>
