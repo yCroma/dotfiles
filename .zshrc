@@ -3,17 +3,45 @@ export EDITOR=vim
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
     --layout=reverse \
-    --info inline \
     --border \
     --bind CTRL-B:preview-up,up:preview-up,CTRL-F:preview-down,down:preview-down
+    "
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="\
+    --height 100% \
     --preview 'bat \
         --color=always \
-        --style=numbers,changes,header \
-        --line-range=:100 {}\
-        '\
+        --style=numbers,changes \
+        --line-range=:100 {}' \
+    --preview-window down:80% \
     "
-# disabled setting
-#--preview-window down:99% \
+
+# tentative not added {{{
+# 色付きプレビュー {{{
+# --preview 'bat \
+#   --color=always \
+#   --style=numbers,changes,header \
+#   --line-range=:100 {}\
+#   '\
+# }}}
+# インライン（フル画面にしない）{{{
+# --info-inline
+# }}}
+# 高さ {{{
+# --height 50%
+# }}}
+# }}}
+
+# intentionally disabled {{{
+# 高さは任意に設定したいから
+# --height 50%
+# 位置調整のやり方を残しておきたいから
+# --preview-window down:99% 
+# 状況によって、sortしたい時とそうでない時があるから
+# --no-sort
+# }}}
+
+# }}}
 
 # Use modern completion system
 autoload -Uz compinit
@@ -90,4 +118,13 @@ alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
 alias cdgr="cd-gitroot"
 
 alias ls="ls -FG"
+# }}}
+# original function {{{
+
+Vif() {
+    vim $(fzf --preview 'bat \
+        --color=always \
+        --style=numbers,changes,header \
+        --line-range=:100 {}')
+}
 # }}}
