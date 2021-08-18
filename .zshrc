@@ -1,4 +1,6 @@
 # ENV
+# source
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
@@ -111,6 +113,7 @@ alias tkw="tmux kill-window"
 alias tusl="bash ~/dotfiles/.scripts/tusl"
 alias vip="vim -c CtrlP"
 alias ide='vim -c "CocCommand explorer --preset ide"'
+alias vif="Vif"
 alias vimo="vim -c MagitOnly"
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
