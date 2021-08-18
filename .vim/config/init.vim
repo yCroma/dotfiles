@@ -21,8 +21,12 @@ set splitbelow
 set backspace=2
 set hlsearch
 
+" short commands
+command! -nargs=0 CursorCerntering normal! zz
+
 " filetype
 if has("autocmd")
+  autocmd BufEnter * CursorCerntering
   autocmd BufNewFile, BufRead *.cson set filetype=json
 endif
 
