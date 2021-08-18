@@ -70,6 +70,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'chengzeyi/fzf-preview.vim'
 
 " Popup your buffer
 Plug 'yCroma/pobls.vim'
