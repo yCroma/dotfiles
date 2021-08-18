@@ -60,6 +60,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 " git-diff
 Plug 'jreybert/vimagit'
+" sign git diff
 Plug 'airblade/vim-gitgutter'
 " use for lightline to display FugitiveHead
 Plug 'tpope/vim-fugitive'
