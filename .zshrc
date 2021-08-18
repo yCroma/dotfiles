@@ -85,10 +85,6 @@ zplug "chrissicool/zsh-256color"
 # cd-gitroot でgit rootへ移動できる
 zplug "mollifier/cd-gitroot"
 
-# cd した時に自動でlsしてくれる
-zplug "desyncr/auto-ls"
-AUTO_LS_COMMANDS=(ls)
-
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -131,6 +127,20 @@ alias cdgr="cd-gitroot"
 
 alias ls="ls -FG"
 # }}}
+
+# functions
+#  {{{
+# implemented function {{{
+# cd した時に自動でlsしてくれる
+chpwd() {
+    if [[ $(pwd) != $HOME ]]; then;
+        # F: 拡張子を表示
+        # G: 色付け
+        ls -FG
+    fi
+}
+# }}}
+
 # original function {{{
 
 Vif() {
