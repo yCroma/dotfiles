@@ -111,6 +111,7 @@ alias tkw="tmux kill-window"
 alias tusl="bash ~/dotfiles/.scripts/tusl"
 alias vip="vim -c CtrlP"
 alias ide='vim -c "CocCommand explorer --preset ide"'
+alias vimo="vim -c MagitOnly"
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
 alias glist="zsh ~/dotfiles/.scripts/ghq/glist"

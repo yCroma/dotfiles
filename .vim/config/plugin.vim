@@ -59,6 +59,7 @@ Plug 'christoomey/vim-tmux-navigator'
 "Plug 'easymotion/vim-easymotion'
 
 " git-diff
+Plug 'jreybert/vimagit'
 Plug 'airblade/vim-gitgutter'
 " use for lightline to display FugitiveHead
 Plug 'tpope/vim-fugitive'
