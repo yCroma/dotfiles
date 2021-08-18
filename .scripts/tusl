@@ -5,11 +5,8 @@ WIN_WIDTH=$(tput cols)
 if [ $WIN_WIDTH -lt 80 ] 
 then
     tmux set-option -g status-left "#[fg=colour22,bg=colour148, bold] #S:#I.#P #[default]"
-    #tmux source
     tmux refresh-client
 else
-
     tmux set-option -g status-left "#[fg=colour17,bg=colour117, bold] #h #[default]#[fg=colour22,bg=colour148, bold] #S:#I.#P #[default]"
-    #tmux source
     tmux refresh-client
 fi
