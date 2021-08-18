@@ -89,5 +89,8 @@ Plug 'thinca/vim-quickrun'
 "Plug 'kshenoy/vim-signature'
 "Plug 'Yilin-Yang/vim-markbar'
 
+" denops plugins
+Plug 'vim-denops/denops.vim'
+Plug 'skanehira/command.vim'
 
 call plug#end()
