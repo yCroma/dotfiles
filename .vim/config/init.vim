@@ -26,7 +26,7 @@ command! -nargs=0 CursorCerntering normal! zz
 
 " filetype
 if has("autocmd")
-  autocmd BufEnter * CursorCerntering
+  autocmd WinEnter * CursorCerntering
   autocmd BufNewFile, BufRead *.cson set filetype=json
 endif
 
