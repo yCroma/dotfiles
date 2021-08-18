@@ -94,4 +94,7 @@ Plug 'thinca/vim-quickrun'
 Plug 'vim-denops/denops.vim'
 Plug 'skanehira/command.vim'
 
+" undo tree
+Plug 'mbbill/undotree'
+
 call plug#end()
