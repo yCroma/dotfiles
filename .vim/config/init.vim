@@ -52,8 +52,8 @@ if has("autocmd")
     "ファイルタイプの検索を有効にする
     filetype plugin on
     autocmd FileType tmux        setlocal foldmethod=marker
-    autocmd FileType zsh         setlocal foldmethod=marker
     autocmd FileType vim         setlocal foldmethod=marker
+    autocmd FileType zsh         setlocal foldmethod=marker
 endif
 
 " Save fold settings.
