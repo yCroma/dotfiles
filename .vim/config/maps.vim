@@ -45,9 +45,9 @@ tnoremap <C-h> <C-w>h
 " create tab
 nnoremap <Space>t0 :0tabnew<CR>
 nnoremap <Space>t$ :$tabnew<CR>
-nnoremap <Space>t1 1gt<CR>
-nnoremap <Space>t2 2gt<CR>
-nnoremap <Space>t3 3gt<CR>
+nnoremap <Space>g1 1gt<CR>
+nnoremap <Space>g2 2gt<CR>
+nnoremap <Space>g3 3gt<CR>
 
 " create tab Terminal
 " nnoremap <silent><Space>t :0tabnew<CR>:terminal ++curwin<CR>
