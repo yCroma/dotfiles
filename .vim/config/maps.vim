@@ -42,6 +42,8 @@ tnoremap <C-k> <C-w>k
 tnoremap <C-l> <C-w>l
 tnoremap <C-h> <C-w>h
 
+" create tab
+nnoremap <Space>t0 :0tabnew<CR>
 " create tab Terminal
 " nnoremap <silent><Space>t :0tabnew<CR>:terminal ++curwin<CR>
 nnoremap <Space>tv :vert terminal<CR>
