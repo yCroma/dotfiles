@@ -26,6 +26,9 @@ nnoremap <C-p> :bpre<CR>
 " push Esc twice, stop hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
+" toggle relativenumber
+nnoremap <Space>tn  :<C-u>setlocal relativenumber!<CR>
+
 " <C-c> to <Esc>
 inoremap <C-c> <Esc>
 
