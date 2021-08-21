@@ -31,6 +31,9 @@ Plug 'mattn/emmet-vim'
 " make table for markdown
 Plug 'mattn/vim-maketable'
 
+" memo
+Plug 'glidenote/memolist.vim'
+
 " lsp
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
