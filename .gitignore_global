@@ -10,5 +10,8 @@ tmp
 .config/coc/extensions/package-lock.json
 .config/coc/list-commands-history.json
 .config/coc/list-explorerFiles-history.json
+.config/coc/list-extensions-history.json
+.config/coc/list-lists-history.json
+.config/coc/lists
 .config/coc/list-location-history.json
 .vim/after/
