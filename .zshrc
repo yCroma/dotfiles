@@ -126,6 +126,7 @@ alias glist="zsh ~/dotfiles/.scripts/ghq/glist"
 alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
 alias cdgr="cd-gitroot"
 alias hcm="fzf-history-widget"
+alias frm="zsh ~/dotfiles/.scripts/frm"
 
 alias ls="ls -FG"
 # }}}
