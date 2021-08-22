@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+session=$(tmux list-session -F "#{session_name}" | fzf | cut -d : -f 1)
+
+tmux attach -t $session
+
+if [ -z "$TMUX" ]
+then
+    tmux attach -t $session
+else
+    tmux switch-client -t $session
+fi
