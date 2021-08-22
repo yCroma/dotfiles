@@ -2,11 +2,28 @@
 
 WIN_WIDTH=$(tput cols)
 
-if [ $WIN_WIDTH -lt 80 ] 
-then
+short() {
+    tmux set-option -g status-left "#[fg=colour22,bg=colour148, bold] #S #[default]"
+    tmux set-window-option -g window-status-format "#[fg=colour255,bg=colour240] #I: #W #[default]"
+    tmux set-window-option -g window-status-current-format "#[fg=colour52,bg=colour166, bold] #I: #W #[default]"
+    tmux set-window-option -g status-right "\
+        #[fg=colour255, bg=colour240] %m/%d "
+    tmux refresh-client
+}
+
+middle() {
     tmux set-option -g status-left "#[fg=colour22,bg=colour148, bold] #S:#I.#P #[default]"
     tmux refresh-client
-else
+}
+
+long() {
     tmux set-option -g status-left "#[fg=colour17,bg=colour117, bold] #h #[default]#[fg=colour22,bg=colour148, bold] #S:#I.#P #[default]"
     tmux refresh-client
-fi
+}
+
+long
+if [ $WIN_WIDTH -lt 80 ]; then middle; fi
+if [ $WIN_WIDTH -lt 60 ]; then short; fi
+
+
+
