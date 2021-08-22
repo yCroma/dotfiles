@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-destination_dir="$(ghq root)/$(ghq list | fzf --inline-info --height 40% --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")"
+destination_dir="$(ghq root)/$(ghq list | fzf --height 100% --preview-window down:80% --preview "bat --color=always --style=header,grid --line-range :80 $(ghq root)/{}/README.*")"
 
 repo_name=${destination_dir##*/}
 
