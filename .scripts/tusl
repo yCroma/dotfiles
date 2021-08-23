@@ -22,7 +22,7 @@ long() {
 }
 
 long
-if [ $WIN_WIDTH -lt 80 ]; then middle; fi
+if [ $WIN_WIDTH -lt 90 ]; then middle; fi
 if [ $WIN_WIDTH -lt 60 ]; then short; fi
 
 
