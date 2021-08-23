@@ -25,6 +25,9 @@ Plug 'lambdalisue/fern-git-status.vim'
 " auto-pair
 Plug 'mattn/vim-lexiv'
 
+" comment line
+Plug 'tpope/vim-commentary'
+
 " emmet
 Plug 'mattn/emmet-vim'
 
