@@ -128,6 +128,7 @@ alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
 alias cdgr="cd-gitroot"
 alias hcm="fzf-history-widget"
 alias frm="zsh ~/dotfiles/.scripts/frm"
+alias fgl="zsh ~/dotfiles/.scripts/fgl"
 
 alias ls="ls -FG"
 # }}}
