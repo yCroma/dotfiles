@@ -88,3 +88,7 @@ autocmd User CocDiagnosticChange,CocGitStatusChange
     \ call CocActionAsync('runCommand', 'explorer.doAction', 'closest', ['refresh'])
 
 " }}}
+
+" coc-prettier {{{
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+" }}}
