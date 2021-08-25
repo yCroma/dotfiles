@@ -55,6 +55,14 @@ alt - y : yabai -m space --mirror y-axis
 # mirror tree x-axis
 alt - x : yabai -m space --mirror x-axis
 
+# set bsp
+alt - b : yabai -m config layout bsp
+
+# set bsp
+alt - s : yabai -m config layout stack
+alt - p : yabai -m window --focus stack.prev
+alt - n : yabai -m window --focus stack.next
+
 # toggle desktop offset
 #alt - a : yabai -m space --toggle padding && yabai -m space --toggle gap
 
