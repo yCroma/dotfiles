@@ -34,6 +34,9 @@ Plug 'mattn/emmet-vim'
 " make table for markdown
 Plug 'mattn/vim-maketable'
 
+" markdown
+Plug 'violetyk/iikanji-markdown.vim'
+
 " memo
 Plug 'glidenote/memolist.vim'
 
