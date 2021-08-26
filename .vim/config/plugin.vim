@@ -53,7 +53,8 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-repeat'
 
 " change quotation
-Plug 'tpope/vim-surround'
+" Plug 'tpope/vim-surround'
+Plug 'machakann/vim-sandwich'
 
 " replace
 Plug 'kqito/vim-easy-replace'
