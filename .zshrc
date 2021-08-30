@@ -132,6 +132,8 @@ alias frm="zsh ~/dotfiles/.scripts/frm"
 alias fgl="zsh ~/dotfiles/.scripts/fgl"
 alias ml="memo edit"
 alias mn="memo new"
+alias mc="memo cat"
+alias ms="memo serve"
 
 alias ls="ls -FG"
 # }}}
