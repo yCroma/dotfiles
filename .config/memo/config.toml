@@ -1,0 +1,11 @@
+memodir = "~/Dropbox/memolist"
+editor = "vim"
+column = 20
+width = 0
+selectcmd = "fzf --no-sort --preview 'bat --color=always --style=header --line-range=:100 ~/Dropbox/memolist/{}' --preview-window down:80%"
+grepcmd = "grep -nH ${PATTERN} ${FILES}"
+memotemplate = ""
+assetsdir = "."
+pluginsdir = "/Users/kuroumayuki/.config/memo/plugins"
+templatedirfile = ""
+templatebodyfile = ""

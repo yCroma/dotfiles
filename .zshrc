@@ -130,6 +130,7 @@ alias cdgr="cd-gitroot"
 alias hcm="fzf-history-widget"
 alias frm="zsh ~/dotfiles/.scripts/frm"
 alias fgl="zsh ~/dotfiles/.scripts/fgl"
+alias ml="memo edit"
 
 alias ls="ls -FG"
 # }}}
