@@ -32,4 +32,7 @@ then
     mkdir ~/src
 fi
 
+# mattn/memo
+go get github.com/mattn/memo
+
 bash ./ghqinit.sh
