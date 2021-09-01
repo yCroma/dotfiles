@@ -1,0 +1,7 @@
+#!/bin/bash
+
+Dropbox="/mnt/c/Users/$USER/Dropbox"
+WSLDIR="/mnt/e/wsl"
+
+ln -sfv $Dropbox $HOME
+ln -sfv $WSLDIR $HOME
