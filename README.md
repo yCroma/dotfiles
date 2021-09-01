@@ -1,5 +1,22 @@
 # dotfiles
 
+## setup
+
+1. symbolic_linkをはる
+2. osごとのファイルを実行
+
+## middleware
+
+- vim
+- tmux
+- fzf
+  - bat, fd, riqgrep
+- ghq
+  - golang
+- node, npm (for coc)
+- deno(for denops)
+- mdcat (for preview-markdown.vim)
+
 ## memo
 
 - vim-plugin
