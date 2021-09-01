@@ -23,6 +23,13 @@ export FZF_CTRL_T_OPTS="\
     --preview-window down:80% \
     "
 
+case ${OSTYPE} in
+    linux*)
+        export DENO_INSTALL="/home/kuroy/.deno"
+        export PATH="$DENO_INSTALL/bin:$PATH"
+        ;;
+esac
+
 # tentative not added {{{
 # 色付きプレビュー {{{
 # --preview 'bat \
@@ -135,7 +142,16 @@ alias mn="memo new"
 alias mc="memo cat"
 alias ms="memo serve"
 
-alias ls="ls -FG"
+# os依存
+case ${OSTYPE} in
+    darwin*)
+        alias ls="ls -FG"
+        ;;
+    linux*)
+        alias ls="ls --color=auto"
+        alias grep="grep --color=auto"
+        ;;
+esac
 # }}}
 
 # functions
