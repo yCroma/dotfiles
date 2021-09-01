@@ -5,3 +5,5 @@ WSLDIR="/mnt/e/wsl"
 
 ln -sfv $Dropbox $HOME
 ln -sfv $WSLDIR $HOME
+
+echo "localhostForwording=True" >> /mnt/c/Users/$USER/.wslconfig
