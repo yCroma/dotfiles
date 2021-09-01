@@ -1,3 +1,5 @@
+export DENO_INSTALL="/home/kuroy/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 
 alias tmux='tmux -2'
 alias pane='bash ~/.scripts/pane'
