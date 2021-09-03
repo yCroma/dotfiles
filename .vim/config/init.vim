@@ -60,6 +60,7 @@ if has("autocmd")
     autocmd FileType zsh         setlocal foldmethod=marker
 endif
 
+set foldlevel=100
 " Save fold settings.
 autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif
 autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif
