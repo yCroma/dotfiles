@@ -10,17 +10,5 @@
     "markdown"
   ],
   "eslint.autoFixOnSave": true,
-	"explorer.file.showHiddenFiles": false,
-  "explorer.file.hiddenRules": {
-    "filenames": [
-      ".bash_history",
-      ".npm",
-      ".viminfo",
-      ".netrwhist"
-    ],
-    "patternMatches": [
-      "\\.swp$"
-    ]
-  },
   "prettier.printWidth": 79
 }
