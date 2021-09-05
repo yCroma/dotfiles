@@ -38,6 +38,7 @@ if has("autocmd")
     filetype indent on
     "sw=shiftwidth, sts=softtabstop, ts=tabstop, et=expandtabの略
     autocmd FileType json        setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType c           setlocal sw=2 sts=2 ts=2 et
     autocmd FileType javascript  setlocal sw=2 sts=2 ts=2 et
     autocmd FileType typescript  setlocal sw=2 sts=2 ts=2 et
     autocmd FileType markdown    setlocal sw=2 sts=2 ts=2 et
