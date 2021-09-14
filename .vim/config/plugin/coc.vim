@@ -86,8 +86,8 @@ let g:coc_explorer_global_presets = {
 nnoremap <space>el :CocList explPresets
 
 " refresh
-autocmd User CocDiagnosticChange,CocGitStatusChange
-    \ call CocActionAsync('runCommand', 'explorer.doAction', 'closest', ['refresh'])
+" autocmd User CocDiagnosticChange,CocGitStatusChange
+"     \ call CocActionAsync('runCommand', 'explorer.doAction', 'closest', ['refresh'])
 
 " }}}
 

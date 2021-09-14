@@ -7,20 +7,10 @@
     "html",
     "css",
     "vue",
-    "markdown"
+    "markdown",
+    "c"
   ],
   "eslint.autoFixOnSave": true,
-	"explorer.file.showHiddenFiles": false,
-  "explorer.file.hiddenRules": {
-    "filenames": [
-      ".bash_history",
-      ".npm",
-      ".viminfo",
-      ".netrwhist"
-    ],
-    "patternMatches": [
-      "\\.swp$"
-    ]
-  },
-  "prettier.printWidth": 79
+  "prettier.printWidth": 79,
+  "clangd.path": "~/dotfiles/.config/coc/extensions/coc-clangd-data/install/12.0.1/clangd_12.0.1/bin/clangd"
 }
