@@ -127,6 +127,7 @@ alias tusl="bash ~/dotfiles/.scripts/tusl"
 alias vip="vim -c CtrlP"
 alias vif="Vif"
 alias vic='vim -c "tabnew"'
+alias vit='vim -c "tabnew"'
 alias vimo="vim -c MagitOnly"
 alias ide='vim -c "Fern . -drawer -toggle"'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
