@@ -2,8 +2,8 @@
 
 ## setup
 
-1. symbolic_linkをはる
-2. osごとのファイルを実行
+1. symbolic_link をはる
+2. os ごとのファイルを実行
 
 ## middleware
 
@@ -16,6 +16,29 @@
 - node, npm (for coc)
 - deno(for denops)
 - mdcat (for preview-markdown.vim)
+
+## cli
+
+alias,do
+ts, tmux session
+tks, tmux kill-session
+tkw, tmux kill-window
+tusl, tmux update status-line
+gread, fzf git readme
+fgl,git log
+frm, fzf + remove a file or directory
+vif, vim + fzf
+vimo, vimagit only
+vic, vim + tabnew
+vit, vim + tabnew
+ide, vim + fern
+ctrl + r, history
+ctrl + t, fzf current directory
+cdgr, change directory git root
+me, memo edit
+mn, memo new
+mc, memo cat
+ms, memo serve
 
 ## memo
 
