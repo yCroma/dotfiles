@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+gdif() {
+    preview="git diff $@ --color=always -- {-1}"
+    git diff $@ --name-only | fzf -m --ansi \
+        --reverse \
+        --preview $preview \
+        --preview-window down:80% \
+        --header 'Display git diff' 
+}
+
+gdif
