@@ -131,7 +131,6 @@ alias vit='vim -c "tabnew"'
 alias vimo="vim -c MagitOnly"
 alias ide='vim -c "Fern . -drawer -toggle"'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
-alias glog="zsh ~/dotfiles/.scripts/ghq/glog"
 alias glist="zsh ~/dotfiles/.scripts/ghq/glist"
 alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
 alias cdgr="cd-gitroot"
