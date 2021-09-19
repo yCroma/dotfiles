@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+# 上位互換のgaddを作成したため、gdifは利用しない
 gdif() {
     preview="git diff $@ --color=always -- {-1}"
     git diff $@ --name-only | fzf -m --ansi \
