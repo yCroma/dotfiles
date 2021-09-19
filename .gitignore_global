@@ -1,5 +1,4 @@
 node_modules
-colors
 ftplugin
 *.swp
 .netrwhist
@@ -17,3 +16,5 @@ tmp
 .config/coc/lists
 .config/coc/list-location-history.json
 .vim/after/
+.vim/colors/*
+!.vim/colors/Tomorrow-Night-Bright.vim
