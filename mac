@@ -7,6 +7,7 @@ brew install \
     ripgrep \
     bat \
     fd \
+    expect \
     koekeishiya/formulae/yabai \
     koekeishiya/formulae/skhd \
     deno

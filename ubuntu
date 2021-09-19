@@ -25,6 +25,8 @@ sudo apt install -y \
 	tmux \
 	fzf \
 
+sudo apt-get install -y expect
+
 # deno
 curl -fsSL https://deno.land/x/install/install.sh | sh
 deno upgrade --version 1.11.0
