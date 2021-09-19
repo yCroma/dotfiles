@@ -132,6 +132,7 @@ alias vimo="vim -c MagitOnly"
 alias ide='vim -c "Fern . -drawer -toggle"'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/glog"
+alias gadd="zsh ~/dotfiles/.scripts/gadd"
 alias gdif="zsh ~/dotfiles/.scripts/gdif"
 alias glist="zsh ~/dotfiles/.scripts/ghq/glist"
 alias gfile="zsh ~/dotfiles/.scripts/ghq/gfile"
