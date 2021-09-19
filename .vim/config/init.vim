@@ -12,6 +12,7 @@ set complete-=i
 set wildmenu
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set laststatus=2
+set cursorline
 
 set hidden
 set updatetime=300
