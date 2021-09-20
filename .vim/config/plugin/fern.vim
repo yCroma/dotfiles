@@ -18,6 +18,8 @@ function! s:init_fern() abort
   "nmap <buffer> <Plug>(fern-action-open) <Plug>(fern-action-open:select)
   " remap for fern
   nmap <buffer> <C-h> <C-w><C-h>
+  nmap <buffer> <C-j> <C-w><C-j>
+  nmap <buffer> <C-k> <C-w><C-k>
   nmap <buffer> <C-l> <C-w><C-l>
   nmap <buffer> q :q<CR>
   nmap <buffer> s <Plug>(fern-action-open:split)
