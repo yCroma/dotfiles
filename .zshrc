@@ -126,6 +126,7 @@ alias tkw="tmux kill-window"
 alias tusl="bash ~/dotfiles/.scripts/tusl"
 alias vip="vim -c CtrlP"
 alias vif="Vif"
+alias vie='vim -c "Fern ."'
 alias vic='vim -c "tabnew"'
 alias vit='vim -c "tabnew"'
 alias vimo="vim -c MagitOnly"
