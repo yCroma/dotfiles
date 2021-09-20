@@ -17,6 +17,7 @@ let g:coc_global_extensions = [
       \ 'coc-tsserver',
       \ 'coc-pyright',
       \ 'coc-clangd',
+      \ 'coc-phpls',
       \ 'coc-yaml',
       \ 'coc-vimlsp',
       \ 'coc-emmet',
