@@ -10,7 +10,8 @@ nnoremap <Space>eF :Fern . -opener=vsplit -reveal=%<CR>
 nnoremap <Space>es :Fern . -opener=split -reveal=%<CR>
 nnoremap <Space>ei :Fern . -drawer -reveal=% -toggle<CR>
 nnoremap <Space>ed :Fern ~/dotfiles -drawer -reveal=% -toggle<CR>
-nnoremap <Space>ev :Fern ~/dotfiles/.vim -drawer -reveal=% -toggle<CR>
+"nnoremap <Space>ev :Fern ~/dotfiles/.vim -drawer -reveal=% -toggle<CR>
+nnoremap <Space>ev :Fern . -opener=vsplit -reveal=%<CR>
 
 function! s:init_fern() abort
   "Use 'select' instead of 'edit' for default 'open' action
