@@ -10,7 +10,8 @@
     "css",
     "vue",
     "markdown",
-    "c"
+    "c",
+    "php"
   ],
   "eslint.autoFixOnSave": true,
   "prettier.printWidth": 79,
