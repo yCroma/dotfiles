@@ -11,7 +11,7 @@ gadd() {
         selected=$(tr '\n' ' ' <<< "$selected")
         git add $(echo $selected)
         echo "added: $selected"
-        vim -c "MagitOnly"
+        git commit -v
         echo 'commited!'
     fi
 }
