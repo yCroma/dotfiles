@@ -477,6 +477,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("diffRemoved", s:red, "", "")
 	call <SID>X("gitcommitSummary", "", "", "bold")
 
+	" Markdown
+	call <SID>X("markdownLineBreak", s:orange, "", "")
+
 	" Delete Functions
 	delf <SID>X
 	delf <SID>rgb
