@@ -1,0 +1,30 @@
+#!/bin/zsh
+
+# gitのファイルを選択
+# そのファイルのログを見る
+flog() {
+    local selectedfile
+    selectedfile=$(fzf \
+        --ansi \
+        --header 'Select a file, which is git blamed' \
+        --preview-window down:50% \
+        --preview 'echo {} | xargs git log --format="%C(auto)%h%d %s (%an) %C(black)%cr" --color=always'
+    )
+    # 特定のファイルの履歴を見る
+    if [[ -n "$selectedfile" ]]; then
+        #git log $selectedfile | grep commit \
+        git log \
+        --date=short \
+        --format="%C(auto)%h%d %s (%an) %C(black)%C(bold)%cr" \
+        --graph \
+        --color=always \
+        $selectedfile \
+        | \
+        fzf \
+        --ansi \
+        --preview-window down:50% \
+        --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always'
+    fi
+}
+
+flog
