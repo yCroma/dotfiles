@@ -2,12 +2,16 @@
 
 # 上位互換のgaddを作成したため、gdifは利用しない
 gdif() {
-    preview="git diff $@ --color=always -- {-1}"
-    git diff $@ --name-only | fzf -m --ansi \
-        --reverse \
-        --preview $preview \
-        --preview-window down:80% \
-        --header 'Displaying git diff' 
+    local selected
+    selected=$(unbuffer git status -s | \
+        fzf -m --ansi \
+            --preview-window down:50% \
+            --preview "echo {} | awk '{print \$2}' | xargs git diff --color" | \
+        awk '{print $2}')
+    if [[ -n "$selected" ]]; then
+        selected=$(tr '\n' ' ' <<< "$selected")
+        vim $(echo $selected)
+    fi
 }
 
 gdif
