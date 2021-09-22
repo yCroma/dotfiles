@@ -10,9 +10,7 @@ gadd() {
     if [[ -n "$selected" ]]; then
         selected=$(tr '\n' ' ' <<< "$selected")
         git add $(echo $selected)
-        echo "added: $selected"
         vim -c "MagitOnly"
-        echo 'commited!'
     fi
 }
 
