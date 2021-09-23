@@ -476,6 +476,9 @@ if has("gui_running") || &t_Co == 88 || &t_Co == 256
 	call <SID>X("diffAdded", s:green, "", "")
 	call <SID>X("diffRemoved", s:red, "", "")
 	call <SID>X("gitcommitSummary", "", "", "bold")
+	call <SID>X("GitGutterAdd", s:red, "", "")
+	call <SID>X("GitGutterChange", s:green, "", "")
+	call <SID>X("GitGutterDelete", s:blue, "", "")
 
 	" Markdown
 	call <SID>X("markdownLineBreak", s:orange, "", "")
