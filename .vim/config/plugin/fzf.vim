@@ -5,5 +5,4 @@ nnoremap <Space>fb :Buffer<CR>
 nnoremap <Space>gc :Commits<CR>
 nnoremap <Space>fc :BCommits<CR>
 nnoremap <Space>ff :Files<CR>
-nnoremap <Space>fg :GFiles?<CR>
 
