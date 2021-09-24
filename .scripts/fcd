@@ -1,0 +1,21 @@
+#!/bin/zsh
+
+DirPath=$(fd --type directory \
+            --exclude .git \
+            --hidden \
+            --no-ignore \
+            --follow \
+            --full-path \
+        |
+            fzf --ansi --height 100% \
+            --preview 'fd . {} --color=always' \
+            --preview-window down:50%)
+
+if [[ -n "$DirPath" ]]; then
+    #source ~/dotfiles/.scripts/cdcom $DirPath
+    cd "$DirPath"
+    # echo "processid: $$"
+    # echo "parentid : $PPID"
+    # chdir "$DirPath"
+fi
+
