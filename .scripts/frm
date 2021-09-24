@@ -1,6 +1,12 @@
 #!/bin/zsh
 
-removePath=$(fd --hidden --follow --exclude .git | fzf --height 100% --preview 'bat --color=always --style=numbers,changes --line-range=:100 {}' --preview-window down:80%)
+removePath=$(fd --no-ignore --hidden --follow --exclude .git | fzf --height 100% --preview 'FDcheck(){
+    if [[ -f $1 ]]; then
+        bat --color=always --style=changes,numbers $1
+    else
+        fd . $1 --color=always
+    fi
+}; FDcheck {}' --preview-window down:60%)
 
 if [ -n "$removePath" ]
 then
