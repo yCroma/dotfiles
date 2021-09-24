@@ -36,6 +36,10 @@ inoremap <C-c> <Esc>
 nnoremap <space>r <C-w>r
 nnoremap <space>R <C-w>R
 
+" split window
+nnoremap <space>s :split<CR>
+nnoremap <space>v :vsplit<CR>
+
 " search use verymagic
 nnoremap / /\v
 
