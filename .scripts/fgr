@@ -1,0 +1,22 @@
+#!/bin/zsh
+
+INITIAL_QUERY=""
+RG_PREFIX="rg \
+    --hidden \
+    --follow \
+    --smart-case \
+    --column \
+    --line-number --no-heading --color=always"
+FZF_DEFAULT_COMMAND="$RG_PREFIX '$INITIAL_QUERY'" 
+
+LINEINFO=$(fzf \
+    --bind "change:reload:$RG_PREFIX {q} || true" \
+    --ansi --disabled --query "$INITIAL_QUERY" \
+    --height=100% --layout=reverse \
+    | \
+    awk -F'[:]' '{print "+"$2" "$1}'
+)
+
+if [[ -n $LINEINFO ]]; then
+    vim $(echo $LINEINFO)
+fi
