@@ -15,14 +15,14 @@ flog() {
         #git log $selectedfile | grep commit \
         git log \
         --date=short \
-        --format="%C(auto)%h%d %s (%an) %C(black)%C(bold)%cr" \
+        --format="%C(auto)%h %s (%an) %C(black)%C(bold)%cr" \
         --graph \
         --color=always \
         $selectedfile \
         | \
         fzf \
         --ansi \
-        --bind 'ctrl-r:reload(git log --date=short --format="%C(auto)%h%d %s (%an) %C(black)%C(bold)%cr" --graph --color=always '$selectedfile')' \
+        --bind 'ctrl-r:reload(git log --date=short --format="%C(auto)%h %s (%an) %C(black)%C(bold)%cr" --graph --color=always '$selectedfile')' \
         --header 'Press Ctrl-R to reload' \
         --preview-window down:50% \
         --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always'
