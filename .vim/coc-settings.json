@@ -11,7 +11,8 @@
     "vue",
     "markdown",
     "c",
-    "php"
+    "php",
+    "json"
   ],
   "eslint.autoFixOnSave": true,
   "prettier.printWidth": 79,
