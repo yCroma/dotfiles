@@ -178,12 +178,16 @@ chpwd() {
 # original function {{{
 
 Vif() {
-    vim $(fzf --height 100% \
+    local selected
+    selected=$(fzf --height 100% \
         --preview 'bat \
             --color=always \
             --style=numbers,changes,header \
             --line-range=:100 {}'\
         --preview-window down:80% )
+    if [[ -n "$selected" ]]; then
+        vim $(echo $selected)
+    fi
 }
 # }}}
 
