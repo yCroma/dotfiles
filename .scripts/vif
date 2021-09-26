@@ -3,12 +3,14 @@
 vif() {
     local selected
     selected=$(fzf --height 100% \
+        -m \
         --preview 'bat \
             --color=always \
             --style=numbers,changes \
             --line-range=:100 {}'\
         --preview-window down:50% )
     if [[ -n "$selected" ]]; then
+        selected=$(tr '\n' ' ' <<< "$selected")
         vim $(echo $selected)
     fi
 }
