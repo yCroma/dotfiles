@@ -2,11 +2,15 @@
 
 gadd() {
     local selected
+    # untrackedなファイルはadd登録されていないと処理する
+    git add --intent-to-add .
     selected=$(unbuffer git status -s | \
         fzf -m --ansi \
             --preview-window down:50% \
             --preview "echo {} | awk '{print \$2}' | xargs git diff --color=always" | \
         awk '{print $2}')
+    # addしたことをreset
+    git reset --mixed -q
     if [[ -n "$selected" ]]; then
         selected=$(tr '\n' ' ' <<< "$selected")
         git add $(echo $selected)
