@@ -1,0 +1,16 @@
+#!/bin/zsh
+
+vif() {
+    local selected
+    selected=$(fzf --height 100% \
+        --preview 'bat \
+            --color=always \
+            --style=numbers,changes \
+            --line-range=:100 {}'\
+        --preview-window down:50% )
+    if [[ -n "$selected" ]]; then
+        vim $(echo $selected)
+    fi
+}
+
+vif

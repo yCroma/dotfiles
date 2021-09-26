@@ -125,7 +125,7 @@ alias tks="tmux kill-session"
 alias tkw="tmux kill-window"
 alias tusl="bash ~/dotfiles/.scripts/tusl"
 alias vip="vim -c CtrlP"
-alias vif="Vif"
+alias vif='zsh ~/dotfiles/.scripts/vif'
 alias vie='vim -c "Fern ."'
 alias vic='vim -c "tabnew"'
 alias vit='vim -c "tabnew"'
@@ -171,22 +171,6 @@ chpwd() {
         # F: 拡張子を表示
         # G: 色付け
         ls -FG
-    fi
-}
-# }}}
-
-# original function {{{
-
-Vif() {
-    local selected
-    selected=$(fzf --height 100% \
-        --preview 'bat \
-            --color=always \
-            --style=numbers,changes,header \
-            --line-range=:100 {}'\
-        --preview-window down:80% )
-    if [[ -n "$selected" ]]; then
-        vim $(echo $selected)
     fi
 }
 # }}}
