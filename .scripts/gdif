@@ -6,7 +6,7 @@ gdif() {
     selected=$(unbuffer git status -s | \
         fzf -m --ansi \
             --preview-window down:50% \
-            --preview "echo {} | awk '{print \$2}' | xargs bat --color=always --style=changes,numbers" | \
+            --preview 'echo {} | awk "{print \$2}" | xargs -I{} zsh -c "git diff --color=always {}"' | \
         awk '{print $2}')
     if [[ -n "$selected" ]]; then
         selected=$(tr '\n' ' ' <<< "$selected")
