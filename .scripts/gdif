@@ -3,11 +3,15 @@
 # 上位互換のgaddを作成したため、gdifは利用しない
 gdif() {
     local selected
+    # untrackedなファイルはadd登録されていないと処理する
+    git add --intent-to-add .
     selected=$(unbuffer git status -s | \
         fzf -m --ansi \
             --preview-window down:50% \
             --preview 'echo {} | awk "{print \$2}" | xargs -I{} zsh -c "git diff --color=always {}"' | \
         awk '{print $2}')
+    # addしたことをreset
+    git reset --mixed -q
     if [[ -n "$selected" ]]; then
         selected=$(tr '\n' ' ' <<< "$selected")
         vim $(echo $selected)
