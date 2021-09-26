@@ -13,8 +13,8 @@ glog() {
       --no-sort \
       --reverse \
       --multi \
-      --bind 'ctrl-s:toggle-sort' \
-      --header 'Press CTRL-S to toggle sort' \
+      --bind 'ctrl-s:toggle-sort,ctrl-r:reload(git log --date=short --format="%C(auto)%h%d %s (%an) %C(black)%C(bold)%cr" --graph --color=always)' \
+      --header 'Press CTRL-S to toggle sort, CTRL-R to reload' \
       --preview-window down:50% \
       --preview 'grep -o "[a-f0-9]\{7,\}" <<< {} | xargs git show --color=always' | grep -o "[a-f0-9]\{7,\}"
 }
