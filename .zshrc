@@ -131,6 +131,7 @@ alias vic='vim -c "tabnew"'
 alias vit='vim -c "tabnew"'
 alias vimo="vim -c MagitOnly"
 alias ide='vim -c "Fern . -drawer -toggle"'
+alias gpom='git pull origin master'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
 alias glog="zsh ~/dotfiles/.scripts/glog"
 alias flog="zsh ~/dotfiles/.scripts/flog"
