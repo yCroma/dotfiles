@@ -63,6 +63,9 @@ alt - s : yabai -m config layout stack
 alt - p : yabai -m window --focus stack.prev
 alt - n : yabai -m window --focus stack.next
 
+# set float
+alt - f : yabai -m config layout float
+
 # toggle desktop offset
 #alt - a : yabai -m space --toggle padding && yabai -m space --toggle gap
 
