@@ -19,9 +19,12 @@ noremap M Mzz
 noremap L Lzz
 noremap G Gzz
 
-" move buffer into tabline
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bpre<CR>
+" move buffer
+nnoremap [b :bpre<CR>
+nnoremap ]b :bnext<CR>
+" move tab
+nnoremap [t :tabprevious<CR>
+nnoremap ]t :tabnext<CR>
 
 " push Esc twice, stop hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
