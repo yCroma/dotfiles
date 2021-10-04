@@ -55,6 +55,7 @@ tnoremap <C-h> <C-w>h
 " create tab
 nnoremap <Space>t0 :0tabnew<CR>
 nnoremap <silent><Space>t$ :$tabnew<CR>
+nnoremap <Space>tn :tabnew<CR>
 nnoremap <Space>g1 1gt<CR>
 nnoremap <Space>g2 2gt<CR>
 nnoremap <Space>g3 3gt<CR>
