@@ -19,15 +19,18 @@ noremap M Mzz
 noremap L Lzz
 noremap G Gzz
 
-" move buffer into tabline
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bpre<CR>
+" move buffer
+nnoremap [b :bpre<CR>
+nnoremap ]b :bnext<CR>
+" move tab
+nnoremap [t :tabprevious<CR>
+nnoremap ]t :tabnext<CR>
 
 " push Esc twice, stop hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " toggle relativenumber
-nnoremap <Space>tn  :<C-u>setlocal relativenumber!<CR>
+"nnoremap <Space>tn  :<C-u>setlocal relativenumber!<CR>
 
 " <C-c> to <Esc>
 inoremap <C-c> <Esc>
@@ -52,6 +55,7 @@ tnoremap <C-h> <C-w>h
 " create tab
 nnoremap <Space>t0 :0tabnew<CR>
 nnoremap <silent><Space>t$ :$tabnew<CR>
+nnoremap <Space>tn :tabnew<CR>
 nnoremap <Space>g1 1gt<CR>
 nnoremap <Space>g2 2gt<CR>
 nnoremap <Space>g3 3gt<CR>

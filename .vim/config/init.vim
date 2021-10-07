@@ -6,7 +6,8 @@ colorscheme Tomorrow-Night-Bright
 
 set showtabline=2
 
-set number relativenumber
+"set number relativenumber
+set number
 set nocompatible
 set complete-=i
 set wildmenu
