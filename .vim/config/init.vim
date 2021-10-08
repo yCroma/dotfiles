@@ -47,6 +47,7 @@ if has("autocmd")
     autocmd FileType html             setlocal sw=2 sts=2 ts=2 et
     autocmd FileType css              setlocal sw=2 sts=2 ts=2 et
     autocmd FileType c                setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType go               setlocal sw=2 sts=2 ts=2 et
     autocmd FileType php              setlocal ts=4 " wpのコード規約に合わせる
     autocmd FileType javascript       setlocal sw=2 sts=2 ts=2 et
     autocmd FileType javascriptreact  setlocal sw=2 sts=2 ts=2 et
