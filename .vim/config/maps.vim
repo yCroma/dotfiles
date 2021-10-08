@@ -19,6 +19,8 @@ noremap M Mzz
 noremap L Lzz
 noremap G Gzz
 
+" once push g, jump line number
+nnoremap - ggzz
 " move buffer
 nnoremap [b :bpre<CR>
 nnoremap ]b :bnext<CR>
