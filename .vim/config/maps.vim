@@ -21,6 +21,10 @@ noremap G Gzz
 
 " once push g, jump line number
 nnoremap - ggzz
+" jump with my feelings
+noremap <C-i> <C-o>zz
+noremap <C-o> <C-i>zz
+
 " move buffer
 nnoremap [b :bpre<CR>
 nnoremap ]b :bnext<CR>
