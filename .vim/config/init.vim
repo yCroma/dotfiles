@@ -44,6 +44,8 @@ if has("autocmd")
     filetype indent on
     "sw=shiftwidth, sts=softtabstop, ts=tabstop, et=expandtabの略
     autocmd FileType json             setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType html             setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType css              setlocal sw=2 sts=2 ts=2 et
     autocmd FileType c                setlocal sw=2 sts=2 ts=2 et
     autocmd FileType php              setlocal ts=4 " wpのコード規約に合わせる
     autocmd FileType javascript       setlocal sw=2 sts=2 ts=2 et
@@ -63,6 +65,8 @@ endif
 if has("autocmd")
     "ファイルタイプの検索を有効にする
     filetype plugin on
+    autocmd FileType html        setlocal foldmethod=indent
+    autocmd FileType css         setlocal foldmethod=indent
     autocmd FileType php         setlocal foldmethod=indent
     autocmd FileType javascript  setlocal foldmethod=indent
     autocmd FileType typescript  setlocal foldmethod=indent
