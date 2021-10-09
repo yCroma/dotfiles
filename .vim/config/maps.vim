@@ -20,10 +20,10 @@ noremap L Lzz
 noremap G Gzz
 
 " once push g, jump line number
-" jump with my feelings
-noremap <C-i> <C-o>zz
-noremap <C-o> <C-i>zz
 noremap - ggzz
+" jump and centering
+noremap <C-i> <C-i>zz
+noremap <C-o> <C-o>zz
 
 " move buffer
 nnoremap [b :bpre<CR>
