@@ -10,7 +10,8 @@ brew install \
     expect \
     koekeishiya/formulae/yabai \
     koekeishiya/formulae/skhd \
-    deno
+    deno \
+    go
 
 if [! -e ~/src ]
 then
