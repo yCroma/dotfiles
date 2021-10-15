@@ -20,3 +20,7 @@ then
 fi
 
 bash ./ghqinit.sh
+
+# mattn/memo
+go get github.com/mattn/memo
+
