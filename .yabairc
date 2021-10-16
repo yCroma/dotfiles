@@ -35,5 +35,6 @@ yabai -m config window_gap                   06
 # Rules
 yabai -m rule --add app="^Inkdrop$" manage=off
 yabai -m rule --add app="^アクティビティモニタ$" manage=off
+yabai -m rule --add app="^メモ$" manage=off
 
 echo "yabai configuration loaded.."
