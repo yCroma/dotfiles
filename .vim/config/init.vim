@@ -14,7 +14,9 @@ set wildmenu
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set laststatus=2
 set cursorline
-set textwidth=999
+set nowrap
+set sidescroll=1 " how many scroll at the edge
+set sidescrolloff=1 " how many scrolloff spaces at the edge
 
 set hidden
 set updatetime=300
