@@ -17,12 +17,12 @@ short() {
 }
 
 middle() {
-    tmux set-option -g status-left "#[fg=colour22,bg=colour148, bold] #S:#I.#P #[default]"
+    tmux set-option -g status-left "#[fg=colour22,bg=colour148, bold] #S #[default]"
     tmux refresh-client
 }
 
 long() {
-    tmux set-option -g status-left "#[fg=colour17,bg=colour117, bold] #h #[default]#[fg=colour22,bg=colour148, bold] #S:#I.#P #[default]"
+    tmux set-option -g status-left "#[fg=colour17,bg=colour117, bold] #h #[default]#[fg=colour22,bg=colour148, bold] #S #[default]"
     tmux refresh-client
 }
 
