@@ -31,6 +31,8 @@ nnoremap ]b :bnext<CR>
 " move tab
 nnoremap [t :tabprevious<CR>
 nnoremap ]t :tabnext<CR>
+nnoremap [T :-tabmove<CR>
+nnoremap ]T :+tabmove<CR>
 
 " push Esc twice, stop hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
