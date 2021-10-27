@@ -31,8 +31,13 @@ nnoremap ]b :bnext<CR>
 " move tab
 nnoremap [t :tabprevious<CR>
 nnoremap ]t :tabnext<CR>
+<<<<<<< HEAD
 nnoremap [T :-tabmove<CR>
 nnoremap ]T :+tabmove<CR>
+=======
+" jump head of line
+noremap ^ 0^
+>>>>>>> 7ee0997e22b16aeca6246fea2a23d214a7d9ec6a
 
 " push Esc twice, stop hlsearch
 nnoremap <Esc><Esc> :nohlsearch<CR><Esc>
