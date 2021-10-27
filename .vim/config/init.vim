@@ -28,7 +28,8 @@ set backspace=2
 set hlsearch
 
 set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+" set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,nbsp:%
 
 " short commands
 command! -nargs=0 CursorCerntering normal! zz
