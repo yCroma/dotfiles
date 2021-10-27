@@ -17,6 +17,7 @@ set cursorline
 set nowrap
 set sidescroll=1 " how many scroll at the edge
 set sidescrolloff=1 " how many scrolloff spaces at the edge
+" set whichwrap=h,l
 
 set hidden
 set updatetime=300
