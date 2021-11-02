@@ -14,7 +14,10 @@ set wildmenu
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set laststatus=2
 set cursorline
-set textwidth=999
+set nowrap
+set sidescroll=1 " how many scroll at the edge
+set sidescrolloff=1 " how many scrolloff spaces at the edge
+" set whichwrap=h,l
 
 set hidden
 set updatetime=300
@@ -25,7 +28,8 @@ set backspace=2
 set hlsearch
 
 set list
-set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+" set listchars=tab:»-,trail:-,extends:»,precedes:«,nbsp:%
+set listchars=tab:»-,trail:-,nbsp:%
 
 " short commands
 command! -nargs=0 CursorCerntering normal! zz

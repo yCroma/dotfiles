@@ -83,7 +83,10 @@ alt - m : yabai -m window --minimize
 
 # float / unfloat window and restore position
 # alt - t : yabai -m window --toggle float && /tmp/yabai-restore/$(yabai -m query --windows --window | jq -re '.id').restore 2>/dev/null || true
-alt - t : yabai -m window --toggle float && yabai -m window --grid 16:16:1:1:14:14
+# for mac-mini
+# alt - t : yabai -m window --toggle float && yabai -m window --grid 16:16:1:1:14:14
+# for macbook-air
+alt - t : yabai -m window --toggle float && yabai -m window --grid 32:32:1:1:30:30
 
 # make floating window fill left-half or right-half of screen
 alt - left : yabai -m window --toggle float && \
