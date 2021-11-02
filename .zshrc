@@ -150,6 +150,9 @@ alias me="memo edit"
 alias mn="memo new"
 alias mc="memo cat"
 alias ms="memo serve"
+alias ll="ls -l"
+alias la="ls -A"
+alias lal="ls -al"
 
 # os依存
 case ${OSTYPE} in
