@@ -75,3 +75,6 @@ nnoremap <Space>g3 3gt<CR>
 " nnoremap <silent><Space>t :0tabnew<CR>:terminal ++curwin<CR>
 nnoremap <Space>tv :vert terminal<CR>
 nnoremap <Space>ts :bo terminal<CR>
+
+" wslでクリップボード共有
+vnoremap <RightMouse> :w !clip.exe<CR><ESC>
