@@ -30,6 +30,8 @@ function! s:init_fern() abort
   nmap <buffer> m <Plug>(fern-action-move)
   nmap <buffer> df <Plug>(fern-action-trash)
   nmap <buffer> dF <Plug>(fern-action-remove)
+  nmap <buffer> - <Plug>(fern-action-leave)
+  nmap <buffer> <CR> <Plug>(fern-action-enter)
 endfunction
 
 augroup fern-custom
