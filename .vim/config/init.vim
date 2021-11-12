@@ -70,14 +70,16 @@ endif
 if has("autocmd")
     "ファイルタイプの検索を有効にする
     filetype plugin on
-    autocmd FileType html        setlocal foldmethod=indent
-    autocmd FileType css         setlocal foldmethod=indent
-    autocmd FileType php         setlocal foldmethod=indent
-    autocmd FileType javascript  setlocal foldmethod=indent
-    autocmd FileType typescript  setlocal foldmethod=indent
-    autocmd FileType tmux        setlocal foldmethod=marker
-    autocmd FileType vim         setlocal foldmethod=marker
-    autocmd FileType zsh         setlocal foldmethod=marker
+    autocmd FileType html             setlocal foldmethod=indent
+    autocmd FileType css              setlocal foldmethod=indent
+    autocmd FileType php              setlocal foldmethod=indent
+    autocmd FileType javascript       setlocal foldmethod=indent
+    autocmd FileType javascriptreact  setlocal foldmethod=indent
+    autocmd FileType typescript       setlocal foldmethod=indent
+    autocmd FileType typescriptreact  setlocal foldmethod=indent
+    autocmd FileType tmux             setlocal foldmethod=marker
+    autocmd FileType vim              setlocal foldmethod=marker
+    autocmd FileType zsh              setlocal foldmethod=marker
 endif
 
 set foldlevel=100
