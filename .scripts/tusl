@@ -10,7 +10,7 @@ WIN_WIDTH=$(tput cols)
 short() {
     tmux set-option -g status-left "#[fg=colour22,bg=colour148, bold] #S #[default]"
     tmux set-window-option -g status-right "\
-        #[fg=colour255, bg=colour240] %m/%d "
+        #[fg=colour255, bg=colour240] %m/%d(%a) %H:%M "
     tmux refresh-client
 }
 
