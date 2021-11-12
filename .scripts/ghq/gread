@@ -10,12 +10,12 @@ if [ -n "$destination_dir" ]; then
     if [ -z ${TMUX}]
     then
         echo "dive into tmux"
-        tmux new -A -s $repo_name -c $destination_dir
+        tmux -u new -A -s $repo_name -c $destination_dir
     else
         echo "in tmux now"
         echo ${destination_dir##*/}
-        tmux new-session -s $repo_name -d -c $destination_dir
-        tmux switch-client -t $repo_name
+        tmux -u new-session -s $repo_name -d -c $destination_dir
+        tmux -u switch-client -t $repo_name
     fi
 fi
 
