@@ -153,6 +153,7 @@ alias ms="memo serve"
 alias ll="ls -l"
 alias la="ls -A"
 alias lal="ls -al"
+alias tmux="tmux -u"
 
 # os依存
 case ${OSTYPE} in
