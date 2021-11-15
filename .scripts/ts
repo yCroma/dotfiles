@@ -4,7 +4,7 @@ session=$(tmux list-session -F "#{session_name}" | fzf | cut -d : -f 1)
 
 if [ -z "$TMUX" ]
 then
-    tmux attach -t $session
+    tmux -u attach -t $session
 else
-    tmux switch-client -t $session
+    tmux -u switch-client -t $session
 fi
