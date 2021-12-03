@@ -108,7 +108,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/ddc.vim'
 " Plug 'Shougo/pum.vim'
 
-Plug 'Shougo/ddc-around'
+" Plug 'Shougo/ddc-around'
 Plug 'Shougo/ddc-matcher_head'
 
 " 重複が気になる場合は下記のプラグインを入れる
