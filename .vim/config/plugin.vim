@@ -104,6 +104,7 @@ Plug 'vim-denops/denops.vim'
 Plug 'skanehira/command.vim'
 
 " lsp
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/ddc.vim'
 " Plug 'Shougo/pum.vim'
 
