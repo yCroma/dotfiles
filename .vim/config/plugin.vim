@@ -40,9 +40,6 @@ Plug 'violetyk/iikanji-markdown.vim'
 " memo
 Plug 'glidenote/memolist.vim'
 
-" lsp
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " window resizing
 Plug 'simeji/winresizer'
 

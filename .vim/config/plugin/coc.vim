@@ -1,28 +1,28 @@
 " coc 全般のコンフィグ
 " coc.nvim {{{
-inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
-inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
-inoremap <C-S> <C-\><C-O>:call CocActionAsync('showSignatureHelp')<cr>
+" inoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(1)\<cr>" : "\<Right>"
+" inoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? "\<c-r>=coc#float#scroll(0)\<cr>" : "\<Left>"
+" inoremap <C-S> <C-\><C-O>:call CocActionAsync('showSignatureHelp')<cr>
 " can not use noremap for <Plug>
 " https://github.com/neoclide/coc.nvim/issues/1207
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
 
 let g:coc_global_extensions = [
-      \ 'coc-json',
       \ 'coc-prettier',
-      \ 'coc-eslint',
-      \ 'coc-tsserver',
-      \ 'coc-pyright',
-      \ 'coc-clangd',
-      \ 'coc-phpls',
-      \ 'coc-css',
-      \ 'coc-yaml',
-      \ 'coc-vimlsp',
-      \ 'coc-emmet',
-      \ 'coc-docker']
+      \ 'coc-eslint']
+"      \ 'coc-json',
+"      \ 'coc-tsserver',
+      " \ 'coc-pyright',
+      " \ 'coc-clangd',
+      " \ 'coc-phpls',
+      " \ 'coc-css',
+      " \ 'coc-yaml',
+      " \ 'coc-vimlsp',
+      " \ 'coc-emmet',
+      " \ 'coc-docker',
  "     \ 'coc-explorer']
 " }}}
 
@@ -85,7 +85,7 @@ let g:coc_explorer_global_presets = {
 "nnoremap <space>et :CocCommand explorer --preset tab<CR>
 
 " List all presets
-nnoremap <space>el :CocList explPresets
+" nnoremap <space>el :CocList explPresets
 
 " refresh
 " autocmd User CocDiagnosticChange,CocGitStatusChange
