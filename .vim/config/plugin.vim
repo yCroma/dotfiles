@@ -99,7 +99,25 @@ Plug 'thinca/vim-quickrun'
 
 " denops plugins
 Plug 'vim-denops/denops.vim'
+
+" inline command tool
 Plug 'skanehira/command.vim'
+
+" lsp
+Plug 'Shougo/ddc.vim'
+" Plug 'Shougo/pum.vim'
+
+Plug 'Shougo/ddc-around'
+Plug 'Shougo/ddc-matcher_head'
+
+" 重複が気になる場合は下記のプラグインを入れる
+" Plug 'Shougo/ddc-converter_remove_overlap'
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'tani/ddc-fuzzy'
+Plug 'matsui54/ddc-buffer'
+
 
 " undo tree
 Plug 'mbbill/undotree'
