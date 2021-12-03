@@ -116,6 +116,7 @@ Plug 'Shougo/ddc-matcher_head'
 
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
+Plug 'shun/ddc-vim-lsp'
 Plug 'tani/ddc-fuzzy'
 Plug 'matsui54/ddc-buffer'
 
