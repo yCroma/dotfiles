@@ -32,6 +32,21 @@ function! s:init_ddc()
           \ 'fromAltBuf': v:true,
           \},
           \})
+
+  " ddc-file
+  let l:sources += ['file']
+  call ddc#custom#patch_global('sourceOptions', {
+        \ 'file': {
+          \ 'mark': 'F',
+          \ 'isVolatile': v:true,
+          \ 'forceCompletionPattern': '/\S*',
+          \ }})
+
+  call ddc#custom#patch_global('sourceParams', {
+        \ 'file': {
+          \ 'projFromCwdMaxCandidates': [0],
+          \ }})
+
   call ddc#custom#patch_global('sources', l:sources)
   call ddc#enable()
 endfunction

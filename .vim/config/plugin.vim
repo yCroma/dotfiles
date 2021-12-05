@@ -120,6 +120,7 @@ Plug 'mattn/vim-lsp-settings'
 Plug 'shun/ddc-vim-lsp'
 Plug 'tani/ddc-fuzzy'
 Plug 'matsui54/ddc-buffer'
+Plug 'LumaKernel/ddc-file'
 
 
 " undo tree
