@@ -1,6 +1,8 @@
 #!/bin/zsh
 
-removePath=$(fd --no-ignore --hidden --follow --exclude .git | fzf -m --height 100% --preview 'FDcheck(){
+removePath=$(fd --no-ignore --hidden --follow --exclude .git | fzf -m --height 100% \
+    --header 'Select a file or directory, you want to remove' \
+    --preview 'FDcheck(){
     if [[ -f $1 ]]; then
         bat --color=always --style=changes,numbers $1
     else
