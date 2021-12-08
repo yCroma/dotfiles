@@ -65,8 +65,10 @@ Plug 'christoomey/vim-tmux-navigator'
 " move quic
 "Plug 'easymotion/vim-easymotion'
 
-" git-diff
+" git-client
 Plug 'jreybert/vimagit'
+Plug 'lambdalisue/gina.vim'
+
 " sign git diff
 Plug 'airblade/vim-gitgutter'
 " use for lightline to display FugitiveHead
