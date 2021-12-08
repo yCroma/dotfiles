@@ -2,8 +2,6 @@
 syntax enable
 colorscheme Tomorrow-Night-Bright
 
-"set scrolloff=3
-
 set showtabline=2
 
 "set number relativenumber
@@ -15,6 +13,7 @@ set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V
 set laststatus=2
 set cursorline
 set nowrap
+" set scrolloff=16 " begin vertical scroll at number of scrolloff
 set sidescroll=1 " how many scroll at the edge
 set sidescrolloff=1 " how many scrolloff spaces at the edge
 " set whichwrap=h,l
