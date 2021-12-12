@@ -13,6 +13,9 @@ endif
 " エラーメッセージをpopupしたい場合は、値を1にする
 let g:lsp_diagnostics_float_cursor = 0
 
+let g:lsp_diagnostics_highlights_delay = 200
+let g:lsp_diagnostics_signs_delay = 200
+
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
