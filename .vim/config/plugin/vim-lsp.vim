@@ -10,6 +10,9 @@ endif
 " coc.nvim と同様の定義ジャンプを再現する
 " https://github.com/prabirshrestha/vim-lsp/issues/169
 
+" エラーメッセージをpopupしたい場合は、値を1にする
+let g:lsp_diagnostics_float_cursor = 0
+
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
