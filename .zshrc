@@ -6,8 +6,9 @@
 # env
 # {{{
 export EDITOR=vim
+export CARGO=$HOME/.cargo
 export GOPATH=$HOME/go
-export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin:$CARGO/bin
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
     --layout=reverse \
