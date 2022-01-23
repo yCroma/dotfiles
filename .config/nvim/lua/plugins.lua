@@ -51,7 +51,10 @@ return require('packer').startup(function()
   })
 
   -- scroll bar
-  use('petertriho/nvim-scrollbar')
+  use({
+    'petertriho/nvim-scrollbar',
+    requires = { 'kevinhwang91/nvim-hlslens' },
+  })
 
   -- fzf
   use({

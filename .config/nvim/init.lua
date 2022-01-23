@@ -371,6 +371,16 @@ require('scrollbar').setup({
     Hint = { color = colors.green[1] },
     Misc = { color = colors.purple[1] },
   },
+  handlers = {
+    diagnostic = true,
+    search = true,
+  },
+})
+-- hlslens
+require('scrollbar.handlers.search').setup({
+  calm_down = true,
+  nearest_only = true,
+  nearest_float_when = 'always',
 })
 
 -- preview markdown
