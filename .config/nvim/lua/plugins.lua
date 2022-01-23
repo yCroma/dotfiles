@@ -50,6 +50,9 @@ return require('packer').startup(function()
     config = function() end,
   })
 
+  -- scroll bar
+  use('petertriho/nvim-scrollbar')
+
   -- fzf
   use({
     'nvim-telescope/telescope.nvim',

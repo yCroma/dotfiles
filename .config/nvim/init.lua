@@ -356,6 +356,23 @@ require('indent_blankline').setup({
   },
 })
 
+-- scroll bar
+local sonokai_configuration = vim.fn['sonokai#get_configuration']()
+local colors = vim.fn['sonokai#get_palette'](sonokai_configuration.style)
+require('scrollbar').setup({
+  handle = {
+    color = colors.fg[1],
+  },
+  marks = {
+    Search = { color = colors.orange[1] },
+    Error = { color = colors.red[1] },
+    Warn = { color = colors.yellow[1] },
+    Info = { color = colors.blue[1] },
+    Hint = { color = colors.green[1] },
+    Misc = { color = colors.purple[1] },
+  },
+})
+
 -- preview markdown
 vim.cmd("let g:bufpreview_server_host = '0.0.0.0'")
 vim.cmd('let g:bufpreview_server_port = 9999')
