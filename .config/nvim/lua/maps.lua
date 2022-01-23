@@ -12,6 +12,8 @@ vim.api.nvim_set_keymap('n', 'M', 'Mzz', opts)
 vim.api.nvim_set_keymap('n', 'L', 'Lzz', opts)
 vim.api.nvim_set_keymap('n', 'G', 'Gzz', opts)
 
+vim.api.nvim_set_keymap('n', '^', '0^', opts)
+
 -- vim.api.nvim_set_keymap('n', '-', 'ggzz', opts)
 vim.api.nvim_set_keymap('n', '<C-i>', '<C-i>zz', opts)
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', opts)
