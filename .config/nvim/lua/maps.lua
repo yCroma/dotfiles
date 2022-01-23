@@ -50,7 +50,7 @@ vim.api.nvim_set_keymap(
 vim.api.nvim_set_keymap(
   'n',
   '<Space>ff',
-  ":lua require('telescope.builtin').find_files({layout_strategy='flex'})<cr>",
+  ":lua require('telescope.builtin').current_buffer_fuzzy_find({layout_strategy='flex'})<cr>",
   { noremap = true, silent = true }
 )
 vim.api.nvim_set_keymap(
