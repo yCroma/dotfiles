@@ -95,6 +95,8 @@ vim.api.nvim_set_keymap('n', '<Space>ef', ':NvimTreeToggle<cr>', { noremap = tru
 
 -- gitsigns
 -- stylua: ignore <start>
+vim.api.nvim_set_keymap('n', '[c', ':Gitsigns prev_hunk<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', ']c', ':Gitsigns next_hunk<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>hs', ':Gitsigns stage_hunk<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '<space>hs', ':Gitsigns stage_hunk<cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<space>hu', ':Gitsigns undo_stage_hunk<cr>', { noremap = true, silent = true })
