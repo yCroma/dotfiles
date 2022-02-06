@@ -38,8 +38,11 @@ vim.opt.encoding = 'UTF-8'
 vim.opt.completeopt = { 'menu', 'menuone', 'noselect' }
 
 -- Save fold settings.
+vim.cmd('augroup remember_folds')
+vim.cmd('autocmd!')
 vim.cmd("autocmd BufWritePost * if expand('%') != '' && &buftype !~ 'nofile' | mkview | endif")
 vim.cmd("autocmd BufRead * if expand('%') != '' && &buftype !~ 'nofile' | silent loadview | endif")
+vim.cmd('augroup END')
 -- Don't save options.
 vim.cmd('set viewoptions-=options')
 
