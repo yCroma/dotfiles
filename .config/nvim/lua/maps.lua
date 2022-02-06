@@ -115,4 +115,9 @@ vim.api.nvim_set_keymap('n', '<Space>gs', ':Gina status<CR>', { noremap = true, 
 vim.api.nvim_set_keymap('n', '<Space>gc', ':Gina commit<CR>', { noremap = true, silent = true })
 
 -- quickrun
-vim.api.nvim_set_keymap('n', '<Space>qr', ':QuickRun -outputter/buffer/into "1" -outputter/buffer/opener "new"<CR>', opts)
+vim.api.nvim_set_keymap(
+  'n',
+  '<Space>qr',
+  ':QuickRun -outputter/buffer/into "0" -outputter/buffer/opener "new"<CR>',
+  opts
+)
