@@ -250,4 +250,7 @@ return require('packer').startup(function()
       })
     end,
   })
+
+  -- task runner
+  use('thinca/vim-quickrun')
 end)
