@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# install packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# install stylua
+cargo -v &> /dev/null
+if [ ! $? -ne 0 ] ; then
+# 未インストールの場合 $? -ne 0 が true
+# インストール済みの場合 $? -ne 0 が false
+    cargo install stylua
+fi

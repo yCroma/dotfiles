@@ -6,13 +6,14 @@
 # env
 # {{{
 export EDITOR=vim
+export CARGO=$HOME/.cargo
 export GOPATH=$HOME/go
-export PATH=$PATH:$HOME/go/bin:$GOPATH/bin
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin:$CARGO/bin
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
     --layout=reverse \
     --border \
-    --bind CTRL-B:preview-up,up:preview-up,CTRL-F:preview-down,down:preview-down
+    --bind CTRL-U:preview-up,up:preview-up,CTRL-D:preview-down,down:preview-down
     "
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_CTRL_T_OPTS="\
