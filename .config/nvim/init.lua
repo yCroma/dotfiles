@@ -378,6 +378,9 @@ require('scrollbar').setup({
     diagnostic = true,
     search = true,
   },
+  excluded_filetypes = {
+    'NvimTree',
+  },
 })
 -- hlslens
 require('scrollbar.handlers.search').setup({
