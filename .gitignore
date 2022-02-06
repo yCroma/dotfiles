@@ -1,5 +1,6 @@
 .config/coc/explorer-actions
 .config/coc/extensions/coc-phpls-data/
+.config/coc/extensions/coc-go-data/
 .config/coc/extensions/package.json
 .config/coc/extensions/package-lock.json
 .config/coc/list-commands-history.json
