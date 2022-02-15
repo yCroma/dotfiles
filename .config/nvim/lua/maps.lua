@@ -91,7 +91,7 @@ vim.api.nvim_set_keymap(
 )
 
 -- nvim-tree
-vim.api.nvim_set_keymap('n', '<Space>ef', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>ei', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
 
 -- gitsigns
 -- stylua: ignore <start>
