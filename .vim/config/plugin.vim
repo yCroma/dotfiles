@@ -111,32 +111,10 @@ Plug 'thinca/vim-quickrun'
 "Plug 'Yilin-Yang/vim-markbar'
 
 " denops plugins
-Plug 'vim-denops/denops.vim'
+" Plug 'vim-denops/denops.vim'
 
 " inline command tool
-Plug 'skanehira/command.vim'
+" Plug 'skanehira/command.vim'
 
-" lsp
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'Shougo/ddc.vim'
-" Plug 'Shougo/pum.vim'
-
-Plug 'Shougo/ddc-around'
-Plug 'Shougo/ddc-matcher_head'
-Plug 'Shougo/ddc-sorter_rank'
-
-" 重複が気になる場合は下記のプラグインを入れる
-" Plug 'Shougo/ddc-converter_remove_overlap'
-
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'shun/ddc-vim-lsp'
-Plug 'tani/ddc-fuzzy'
-Plug 'matsui54/ddc-buffer'
-Plug 'LumaKernel/ddc-file'
-
-
-" undo tree
-Plug 'mbbill/undotree'
 
 call plug#end()
