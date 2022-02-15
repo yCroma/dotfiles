@@ -1,6 +1,12 @@
 " install plugin with vim-plug
 
-call plug#begin('~/.vim/ftplugin')
+let ftplugin_path = '~/.vim/ftplugin'
+if has('win32') 
+  let ftplugin_path = '~/vimfiles/ftplugin'
+endif
+
+call plug#begin(ftplugin_path)
+
 
 " colorsheme {{{
 Plug 'flazz/vim-colorschemes'

@@ -12,6 +12,11 @@ set wildmenu
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set laststatus=2
 set cursorline
+if has("win32") 
+  set termguicolors
+  hi clear CursorLine
+  set shell=pwsh
+endif
 set nowrap
 " set scrolloff=16 " begin vertical scroll at number of scrolloff
 set sidescroll=1 " how many scroll at the edge
