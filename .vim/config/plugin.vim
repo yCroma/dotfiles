@@ -7,6 +7,8 @@ endif
 
 call plug#begin(ftplugin_path)
 
+" vim-devicons
+Plug 'ryanoasis/vim-devicons'
 
 " colorsheme {{{
 " Plug 'yCroma/vim-colorschems'
@@ -26,8 +28,10 @@ Plug 'itchyny/lightline.vim'
 " Plug 'prettier/vim-prettier', { 'do': 'npm install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'markdown', 'vue', 'yaml', 'html']}
 
 " filer
+Plug 'lambdalisue/nerdfont.vim'
 Plug 'lambdalisue/fern.vim'
 Plug 'lambdalisue/fern-git-status.vim'
+Plug 'lambdalisue/fern-renderer-nerdfont.vim'
 
 " auto-pair
 Plug 'mattn/vim-lexiv'
