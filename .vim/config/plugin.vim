@@ -9,7 +9,8 @@ call plug#begin(ftplugin_path)
 
 
 " colorsheme {{{
-Plug 'flazz/vim-colorschemes'
+" Plug 'yCroma/vim-colorschems'
+Plug 'https://github.com/yCroma/vim-colorschemes.git'
 " }}}
 
 " tabline {{{
