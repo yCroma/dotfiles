@@ -69,10 +69,10 @@ require('lualine').setup({
   options = {
     icons_enabled = true,
     theme = 'sonokai',
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
-    disabled_filetypes = {},
-    always_divide_middle = true,
+    component_separators = { left = '', right = '' },
+    section_separators = { left = '', right = '' },
+    disabled_filetypes = {},     -- Filetypes to disable lualine for.
+    always_divide_middle = true, -- When set to true, left sections i.e. 'a','b' and 'c'
   },
   sections = {
     lualine_a = { 'mode' },
@@ -91,14 +91,13 @@ require('lualine').setup({
     lualine_z = {},
   },
   tabline = {
-    lualine_a = {},
+    lualine_a = {'buffers'},
     lualine_b = {},
-    lualine_c = { require('tabline').tabline_buffers },
-    lualine_x = { require('tabline').tabline_tabs },
+    lualine_c = {},
+    lualine_x = {},
     lualine_y = {},
-    lualine_z = {},
+    lualine_z = {'tabs'}
   },
-
   extensions = {},
 })
 require('nvim_comment').setup()
