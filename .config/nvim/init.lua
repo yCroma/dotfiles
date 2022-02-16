@@ -339,7 +339,7 @@ require('telescope').setup({
 -- indent guide
 -- exclude filetype
 vim.cmd(
-  "let g:indent_blankline_filetype_exclude = ['gina-status','lsp-installer','markdown','help','NvimTree', 'quickrun']"
+  "let g:indent_blankline_filetype_exclude = ['gina-status','lsp-installer','markdown','help','NvimTree', 'quickrun', 'packer', 'lir']"
 )
 -- color for indent
 vim.cmd([[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]])
@@ -383,6 +383,8 @@ require('scrollbar').setup({
   },
   excluded_filetypes = {
     'NvimTree',
+    'lir',
+    'packer',
   },
 })
 -- hlslens
