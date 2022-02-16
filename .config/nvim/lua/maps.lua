@@ -90,6 +90,10 @@ vim.api.nvim_set_keymap(
   { noremap = true, silent = true }
 )
 
+-- lir.nvim
+vim.api.nvim_set_keymap('n', '<Space>ef', [[<Cmd>execute 'e ' .. expand('%:p:h')<CR>]], { noremap = true })
+vim.api.nvim_set_keymap('n', '<Space>eF', [[<Cmd>execute 'e ' .. getcwd()<CR>]], { noremap = true })
+
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<Space>ei', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
 
