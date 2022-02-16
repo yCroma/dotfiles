@@ -20,6 +20,8 @@ vim.opt.wildmenu = true
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.list = true
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 --vim.cmd("set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%")
 vim.cmd('set listchars=tab:»-,trail:-,nbsp:%')
 
