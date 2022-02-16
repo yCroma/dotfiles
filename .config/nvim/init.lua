@@ -73,7 +73,7 @@ require('lualine').setup({
     theme = 'sonokai',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
-    disabled_filetypes = {},     -- Filetypes to disable lualine for.
+    disabled_filetypes = {}, -- Filetypes to disable lualine for.
     always_divide_middle = true, -- When set to true, left sections i.e. 'a','b' and 'c'
   },
   sections = {
@@ -93,12 +93,12 @@ require('lualine').setup({
     lualine_z = {},
   },
   tabline = {
-    lualine_a = {'buffers'},
+    lualine_a = { 'buffers' },
     lualine_b = {},
     lualine_c = {},
     lualine_x = {},
     lualine_y = {},
-    lualine_z = {'tabs'}
+    lualine_z = { 'tabs' },
   },
   extensions = {},
 })
