@@ -280,7 +280,7 @@ require('formatter').setup({
         return {
           exe = 'stylua',
           args = {
-            '--config-path ' .. os.getenv('HOME') .. '/.stylua.toml',
+            '--search-parent-directories',
             '-',
           },
           stdin = true,
