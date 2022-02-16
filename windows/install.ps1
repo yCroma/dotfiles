@@ -10,3 +10,5 @@ winget install -e --id Git.Git
 scoop install gcc
 scoop install vim
 scoop install neovim
+scoop install rustup
+
