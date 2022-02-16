@@ -12,3 +12,5 @@ scoop install vim
 scoop install neovim
 scoop install rustup
 
+# tools
+cargo install stylua
