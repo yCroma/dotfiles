@@ -38,6 +38,9 @@ return require('packer').startup(function()
     requires = { 'neovim/nvim-lspconfig' },
   })
 
+  -- outliner
+  use({ 'simrat39/symbols-outline.nvim', config = function() end })
+
   -- formatter
   use('mhartington/formatter.nvim')
 
