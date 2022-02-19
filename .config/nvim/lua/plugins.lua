@@ -143,7 +143,11 @@ return require('packer').startup(function()
           auto_resize = false,
           mappings = {
             custom_only = false,
-            list = {},
+            list = {
+              { key = { 'l' }, action = 'edit', mode = 'n' },
+              { key = { 'h' }, action = 'close_node', mode = 'n' },
+              { key = { '@' }, action = 'cd', mode = 'n' },
+            },
           },
           number = false,
           relativenumber = false,
