@@ -119,6 +119,7 @@ vim.api.nvim_set_keymap('n', '<space>gd', ':Gitsigns diffthis<cr>', { noremap = 
 -- gina
 vim.api.nvim_set_keymap('n', '<Space>gs', ':Gina status<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space>gc', ':Gina commit<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>gl', ':Gina log<CR>', { noremap = true, silent = true })
 
 -- quickrun
 vim.api.nvim_set_keymap(
