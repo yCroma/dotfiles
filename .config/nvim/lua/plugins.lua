@@ -70,10 +70,10 @@ return require('packer').startup(function()
   use('SidOfc/mkdx')
 
   -- previewer
-  use({
-    'kat0h/bufpreview.vim',
-    requires = { 'vim-denops/denops.vim' },
-  })
+  -- use({
+  --   'kat0h/bufpreview.vim',
+  --   requires = { 'vim-denops/denops.vim' },
+  -- })
 
   -- nvim-web-devicons
   use('kyazdani42/nvim-web-devicons')
