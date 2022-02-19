@@ -128,3 +128,7 @@ vim.api.nvim_set_keymap(
   ':QuickRun -outputter/buffer/into "0" -outputter/buffer/opener "new"<CR>',
   opts
 )
+
+-- outliner
+vim.api.nvim_set_keymap('n', '<Space>st', ':SymbolsOutline<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>so', ':SymbolsOutline<CR>', { noremap = true, silent = true })
