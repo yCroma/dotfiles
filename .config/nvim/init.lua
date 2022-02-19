@@ -49,6 +49,22 @@ vim.cmd('augroup END')
 vim.cmd('set viewoptions-=options')
 
 -- plugins
+-- gina
+vim.cmd([[
+call gina#custom#command#option("show", "--group", "gitshow")
+call gina#custom#command#option("show", "--opener", "bo vsplit")
+
+augroup gina_init
+autocmd!
+  autocmd Filetype gina-log nmap <buffer> l <Plug>(gina-show)zv
+  autocmd Filetype git nmap <buffer> h :q<CR>
+  autocmd Filetype gina-log nmap <buffer> j j<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> k k<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-d> j<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-u> k<Plug>(gina-show)zv<C-h>
+augroup END')
+]])
+
 -- devicons
 require('nvim-web-devicons').setup({
   -- your personnal icons can go here (to override)
