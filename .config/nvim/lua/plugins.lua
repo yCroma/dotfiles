@@ -159,6 +159,7 @@ return require('packer').startup(function()
   use({
     'tamago324/lir.nvim',
     requires = {
+      'tamago324/lir-git-status.nvim',
       'nvim-lua/plenary.nvim',
       'kyazdani42/nvim-web-devicons',
     },
@@ -211,6 +212,16 @@ return require('packer').startup(function()
           vim.api.nvim_echo({ { vim.fn.expand('%:p'), 'Normal' } }, false, {})
         end,
       })
+
+      require('lir.git_status').setup({
+        show_ignored = false,
+      })
+      vim.cmd([[highlight link LirGitStatusBracket Comment]])
+      vim.cmd([[highlight link LirGitStatusIndex Special]])
+      vim.cmd([[highlight link LirGitStatusWorktree WarningMsg]])
+      vim.cmd([[highlight link LirGitStatusUnmerged ErrorMsg]])
+      vim.cmd([[highlight link LirGitStatusUntracked Comment]])
+      vim.cmd([[highlight link LirGitStatusIgnored Comment]])
 
       require('nvim-web-devicons').set_icon({
         lir_folder_icon = {
