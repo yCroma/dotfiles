@@ -242,7 +242,9 @@ return require('packer').startup(function()
     end,
   })
 
-  use({ 'lambdalisue/gina.vim' })
+  use({
+    'lambdalisue/gina.vim',
+  })
 
   -- nvim-tmux-navigation
   use({
