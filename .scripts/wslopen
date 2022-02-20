@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# open explorer
+# with the path of
+# the command line argument
+
+cmd.exe /c start $(wslpath -w $1)
