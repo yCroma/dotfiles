@@ -4,4 +4,8 @@
 # with the path of
 # the command line argument
 
-cmd.exe /c start $(wslpath -w $1)
+if [ "$#" -eq 0 ]; then
+    cmd.exe /c start $(wslpath -w .)
+else
+    cmd.exe /c start $(wslpath -w $1)
+fi
