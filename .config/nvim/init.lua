@@ -48,6 +48,15 @@ vim.cmd('augroup END')
 -- Don't save options.
 vim.cmd('set viewoptions-=options')
 
+-- swap file
+vim.cmd([[
+let &dir=expand("%:p:h") . "//"
+augroup set_swap_path
+autocmd!
+  autocmd BufEnter * let &dir=expand("%:p:h") . "//"
+augroup END')
+]])
+
 -- plugins
 -- emmet
 vim.cmd([[
