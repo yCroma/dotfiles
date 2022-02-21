@@ -42,7 +42,31 @@ return require('packer').startup(function()
   use({ 'simrat39/symbols-outline.nvim', config = function() end })
 
   -- formatter
-  use('mhartington/formatter.nvim')
+  use({
+    'lukas-reineke/format.nvim',
+    config = function()
+      require('format').setup({
+        ['*'] = {},
+        lua = {
+          {
+            cmd = {
+              'stylua --search-parent-directories',
+            },
+          },
+        },
+        html = {
+          {
+            cmd = {
+              { 'prettier -w --parser html' },
+            },
+          },
+        },
+        json = {
+          { cmd = { 'prettier -w --parser json'}}
+        }
+      })
+    end,
+  })
 
   -- Post-install/update hook with neovim command
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })

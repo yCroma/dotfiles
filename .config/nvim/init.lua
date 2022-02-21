@@ -98,6 +98,14 @@ autocmd!
 augroup END')
 ]])
 
+-- formatter
+vim.cmd([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+]])
+
 -- devicons
 require('nvim-web-devicons').setup({
   -- your personnal icons can go here (to override)
@@ -295,61 +303,6 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' },
   }),
 })
-
-require('formatter').setup({
-  filetype = {
-    javascript = {
-      -- prettier
-      function()
-        return {
-          exe = 'prettier',
-          args = {
-            '--stdin-filepath',
-            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-            '--print-width 80 --tab-width 2 --use-tabs false --single-quote --quote-props as-needed --trailing-comma es5 --arrow-parens always',
-          },
-          stdin = true,
-        }
-      end,
-    },
-    typescriptreact = {
-      -- prettier
-      function()
-        return {
-          exe = 'prettier',
-          args = {
-            '--stdin-filepath',
-            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-            '--print-width 80 --tab-width 2 --use-tabs false --single-quote --quote-props as-needed --trailing-comma es5 --arrow-parens always',
-          },
-          stdin = true,
-        }
-      end,
-    },
-    lua = {
-      -- stylua
-      function()
-        return {
-          exe = 'stylua',
-          args = {
-            '--search-parent-directories',
-            '-',
-          },
-          stdin = true,
-        }
-      end,
-    },
-  },
-})
-
--- stylua: ignore
-vim.api.nvim_exec([[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost *.js,*.jsx,*.ts,*.tsx,*.rs,*.lua FormatWrite
-augroup END
-]],true)
--- stylua: ignore <end>
 
 -- fzf
 require('telescope').setup({
