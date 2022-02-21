@@ -55,6 +55,9 @@ augroup set_swap_path
 autocmd!
   autocmd BufEnter * let &dir=expand("%:p:h") . "//"
 augroup END')
+-- terminal
+vim.cmd([[
+autocmd TermOpen * startinsert
 ]])
 
 -- plugins

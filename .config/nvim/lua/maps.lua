@@ -27,6 +27,11 @@ vim.api.nvim_set_keymap('n', ']t', ':tabnext<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR><Esc>', opts)
 vim.api.nvim_set_keymap('n', 'Y', '<Shift-V>y', opts)
 
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', opts)
+vim.api.nvim_set_keymap('t', '<C-w>n', '<C-\\><C-n>', opts)
+vim.api.nvim_set_keymap('t', '<C-w>[', '<C-\\><C-n>:bpre<CR>', opts)
+vim.api.nvim_set_keymap('t', '<C-w>]', '<C-\\><C-n>:bnext<CR>', opts)
+
 -- plugins
 -- telescope
 vim.api.nvim_set_keymap(
