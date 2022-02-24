@@ -24,12 +24,20 @@ sudo apt install -y \
     vim \
 	tmux \
 	fzf \
+    rustc \
+    git-crypt
 
 sudo apt-get install -y expect
 
+# nvim
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get -y install neovim
+
 # deno
 curl -fsSL https://deno.land/x/install/install.sh | sh
-deno upgrade --version 1.11.0
+deno upgrade --version 1.17.0
 
 # go + ghq
 go get github.com/motemen/ghq

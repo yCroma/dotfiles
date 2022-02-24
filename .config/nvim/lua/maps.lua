@@ -85,6 +85,12 @@ vim.api.nvim_set_keymap(
 )
 vim.api.nvim_set_keymap(
   'n',
+  '<Space>gl',
+  ":lua require('telescope.builtin').git_commits({layout_strategy='flex'})<cr>",
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'n',
   '<Space>fr',
   ":lua require('telescope.builtin').lsp_references({layout_strategy='flex'})<cr>",
   { noremap = true, silent = true }

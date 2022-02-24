@@ -385,6 +385,7 @@ require('scrollbar').setup({
     'NvimTree',
     'lir',
     'packer',
+    'lsp-installer',
   },
 })
 -- hlslens
