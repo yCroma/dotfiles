@@ -27,6 +27,11 @@ vim.api.nvim_set_keymap('n', ']t', ':tabnext<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Esc><Esc>', ':nohlsearch<CR><Esc>', opts)
 vim.api.nvim_set_keymap('n', 'Y', '<Shift-V>y', opts)
 
+vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', opts)
+vim.api.nvim_set_keymap('t', '<C-w>n', '<C-\\><C-n>', opts)
+vim.api.nvim_set_keymap('t', '<C-w>[', '<C-\\><C-n>:bpre<CR>', opts)
+vim.api.nvim_set_keymap('t', '<C-w>]', '<C-\\><C-n>:bnext<CR>', opts)
+
 -- plugins
 -- telescope
 vim.api.nvim_set_keymap(
@@ -125,6 +130,7 @@ vim.api.nvim_set_keymap('n', '<space>gd', ':Gitsigns diffthis<cr>', { noremap = 
 -- gina
 vim.api.nvim_set_keymap('n', '<Space>gs', ':Gina status<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space>gc', ':Gina commit<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>gl', ':Gina log<CR>', { noremap = true, silent = true })
 
 -- quickrun
 vim.api.nvim_set_keymap(
@@ -133,3 +139,7 @@ vim.api.nvim_set_keymap(
   ':QuickRun -outputter/buffer/into "0" -outputter/buffer/opener "new"<CR>',
   opts
 )
+
+-- outliner
+vim.api.nvim_set_keymap('n', '<Space>st', ':SymbolsOutline<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>so', ':SymbolsOutline<CR>', { noremap = true, silent = true })

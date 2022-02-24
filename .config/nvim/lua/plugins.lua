@@ -42,7 +42,34 @@ return require('packer').startup(function()
   use({ 'simrat39/symbols-outline.nvim', config = function() end })
 
   -- formatter
-  use('mhartington/formatter.nvim')
+  use({
+    'lukas-reineke/format.nvim',
+    config = function()
+      require('format').setup({
+        ['*'] = {},
+        lua = {
+          {
+            cmd = {
+              'stylua --search-parent-directories',
+            },
+          },
+        },
+        html = {
+          {
+            cmd = {
+              { 'prettier -w --parser html' },
+            },
+          },
+        },
+        javascript = {
+          { cmd = { 'prettier -w', './node_modules/.bin/eslint --fix' } },
+        },
+        json = {
+          { cmd = { 'prettier -w --parser json' } },
+        },
+      })
+    end,
+  })
 
   -- Post-install/update hook with neovim command
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
@@ -70,10 +97,10 @@ return require('packer').startup(function()
   use('SidOfc/mkdx')
 
   -- previewer
-  use({
-    'kat0h/bufpreview.vim',
-    requires = { 'vim-denops/denops.vim' },
-  })
+  -- use({
+  --   'kat0h/bufpreview.vim',
+  --   requires = { 'vim-denops/denops.vim' },
+  -- })
 
   -- nvim-web-devicons
   use('kyazdani42/nvim-web-devicons')
@@ -100,7 +127,7 @@ return require('packer').startup(function()
         hijack_netrw = false,
         open_on_setup = false,
         ignore_ft_on_setup = {},
-        auto_close = false,
+        auto_close = true,
         open_on_tab = false,
         hijack_cursor = false,
         update_cwd = false,
@@ -143,7 +170,11 @@ return require('packer').startup(function()
           auto_resize = false,
           mappings = {
             custom_only = false,
-            list = {},
+            list = {
+              { key = { 'l' }, action = 'edit', mode = 'n' },
+              { key = { 'h' }, action = 'close_node', mode = 'n' },
+              { key = { '@' }, action = 'cd', mode = 'n' },
+            },
           },
           number = false,
           relativenumber = false,
@@ -153,12 +184,18 @@ return require('packer').startup(function()
           cmd = 'trash',
           require_confirm = true,
         },
+        actions = {
+          open_file = {
+            quit_on_open = false,
+          },
+        },
       })
     end,
   })
   use({
     'tamago324/lir.nvim',
     requires = {
+      'tamago324/lir-git-status.nvim',
       'nvim-lua/plenary.nvim',
       'kyazdani42/nvim-web-devicons',
     },
@@ -212,6 +249,16 @@ return require('packer').startup(function()
         end,
       })
 
+      require('lir.git_status').setup({
+        show_ignored = false,
+      })
+      vim.cmd([[highlight link LirGitStatusBracket Comment]])
+      vim.cmd([[highlight link LirGitStatusIndex Special]])
+      vim.cmd([[highlight link LirGitStatusWorktree WarningMsg]])
+      vim.cmd([[highlight link LirGitStatusUnmerged ErrorMsg]])
+      vim.cmd([[highlight link LirGitStatusUntracked Comment]])
+      vim.cmd([[highlight link LirGitStatusIgnored Comment]])
+
       require('nvim-web-devicons').set_icon({
         lir_folder_icon = {
           icon = '',
@@ -231,7 +278,9 @@ return require('packer').startup(function()
     end,
   })
 
-  use({ 'lambdalisue/gina.vim' })
+  use({
+    'lambdalisue/gina.vim',
+  })
 
   -- nvim-tmux-navigation
   use({

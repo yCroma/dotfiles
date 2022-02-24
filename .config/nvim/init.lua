@@ -48,7 +48,64 @@ vim.cmd('augroup END')
 -- Don't save options.
 vim.cmd('set viewoptions-=options')
 
+-- swap file
+vim.cmd([[
+let &dir=expand("$HOME/.swap")
+]])
+-- terminal
+vim.cmd([[
+autocmd TermOpen * startinsert
+]])
+
 -- plugins
+-- emmet
+vim.cmd([[
+let g:user_emmet_settings = {
+\  'variables': {'lang': 'ja'},
+\  'html': {
+\    'default_attributes': {
+\      'option': {'value': v:null},
+\      'textarea': {'id': v:null, 'name': v:null, 'cols': 10, 'rows': 10},
+\    },
+\    'snippets': {
+\      'html:5': "<!DOCTYPE html>\n"
+\              ."<html lang=\"${lang}\">\n"
+\              ."<head>\n"
+\              ."\t<meta charset=\"${charset}\">\n"
+\              ."\t<title></title>\n"
+\              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+\              ."</head>\n"
+\              ."<body>\n\t${child}|\n</body>\n"
+\              ."</html>",
+\    },
+\  },
+\}
+]])
+
+-- gina
+vim.cmd([[
+call gina#custom#command#option("show", "--group", "gitshow")
+call gina#custom#command#option("show", "--opener", "bo vsplit")
+
+augroup gina_init
+autocmd!
+  autocmd Filetype gina-log nmap <buffer> l <Plug>(gina-show)zv
+  autocmd Filetype git nmap <buffer> h :q<CR>
+  autocmd Filetype gina-log nmap <buffer> <C-n> j<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-p> k<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-d> j<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-u> k<Plug>(gina-show)zv<C-h>
+augroup END')
+]])
+
+-- formatter
+vim.cmd([[
+augroup FormatAutogroup
+  autocmd!
+  autocmd BufWritePost * FormatWrite
+augroup END
+]])
+
 -- devicons
 require('nvim-web-devicons').setup({
   -- your personnal icons can go here (to override)
@@ -208,7 +265,9 @@ cmp.setup({
   },
   mapping = {
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+    ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+    ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
     ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
     ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ['<C-e>'] = cmp.mapping({
@@ -219,6 +278,7 @@ cmp.setup({
   },
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
+    { name = 'path' },
     -- { name = 'vsnip' }, -- For vsnip users.
     -- { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
@@ -243,61 +303,6 @@ cmp.setup.cmdline(':', {
     { name = 'cmdline' },
   }),
 })
-
-require('formatter').setup({
-  filetype = {
-    javascript = {
-      -- prettier
-      function()
-        return {
-          exe = 'prettier',
-          args = {
-            '--stdin-filepath',
-            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-            '--print-width 80 --tab-width 2 --use-tabs false --single-quote --quote-props as-needed --trailing-comma es5 --arrow-parens always',
-          },
-          stdin = true,
-        }
-      end,
-    },
-    typescriptreact = {
-      -- prettier
-      function()
-        return {
-          exe = 'prettier',
-          args = {
-            '--stdin-filepath',
-            vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-            '--print-width 80 --tab-width 2 --use-tabs false --single-quote --quote-props as-needed --trailing-comma es5 --arrow-parens always',
-          },
-          stdin = true,
-        }
-      end,
-    },
-    lua = {
-      -- stylua
-      function()
-        return {
-          exe = 'stylua',
-          args = {
-            '--search-parent-directories',
-            '-',
-          },
-          stdin = true,
-        }
-      end,
-    },
-  },
-})
-
--- stylua: ignore
-vim.api.nvim_exec([[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost *.js,*.jsx,*.ts,*.tsx,*.rs,*.lua FormatWrite
-augroup END
-]],true)
--- stylua: ignore <end>
 
 -- fzf
 require('telescope').setup({
@@ -339,7 +344,7 @@ require('telescope').setup({
 -- indent guide
 -- exclude filetype
 vim.cmd(
-  "let g:indent_blankline_filetype_exclude = ['gina-status','lsp-installer','markdown','help','NvimTree', 'quickrun', 'packer', 'lir']"
+  "let g:indent_blankline_filetype_exclude = ['gina-status','git','lsp-installer','markdown','help','NvimTree', 'quickrun', 'packer', 'lir']"
 )
 -- color for indent
 vim.cmd([[highlight IndentBlanklineIndent1 guifg=#E06C75 gui=nocombine]])
@@ -386,6 +391,8 @@ require('scrollbar').setup({
     'lir',
     'packer',
     'lsp-installer',
+    'Outline',
+    'git',
   },
 })
 -- hlslens
@@ -406,7 +413,7 @@ vim.g.symbols_outline = {
   auto_preview = true,
   position = 'right',
   relative_width = true,
-  width = 25,
+  width = 55,
   auto_close = false,
   show_numbers = false,
   show_relative_numbers = false,
