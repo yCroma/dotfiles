@@ -91,8 +91,8 @@ augroup gina_init
 autocmd!
   autocmd Filetype gina-log nmap <buffer> l <Plug>(gina-show)zv
   autocmd Filetype git nmap <buffer> h :q<CR>
-  autocmd Filetype gina-log nmap <buffer> j j<Plug>(gina-show)zv<C-h>
-  autocmd Filetype gina-log nmap <buffer> k k<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-n> j<Plug>(gina-show)zv<C-h>
+  autocmd Filetype gina-log nmap <buffer> <C-p> k<Plug>(gina-show)zv<C-h>
   autocmd Filetype gina-log nmap <buffer> <C-d> j<Plug>(gina-show)zv<C-h>
   autocmd Filetype gina-log nmap <buffer> <C-u> k<Plug>(gina-show)zv<C-h>
 augroup END')
