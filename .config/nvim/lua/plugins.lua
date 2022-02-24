@@ -61,9 +61,12 @@ return require('packer').startup(function()
             },
           },
         },
+        javascript = {
+          { cmd = { 'prettier -w', './node_modules/.bin/eslint --fix' } },
+        },
         json = {
-          { cmd = { 'prettier -w --parser json'}}
-        }
+          { cmd = { 'prettier -w --parser json' } },
+        },
       })
     end,
   })
