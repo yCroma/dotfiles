@@ -50,11 +50,8 @@ vim.cmd('set viewoptions-=options')
 
 -- swap file
 vim.cmd([[
-let &dir=expand("%:p:h") . "//"
-augroup set_swap_path
-autocmd!
-  autocmd BufEnter * let &dir=expand("%:p:h") . "//"
-augroup END')
+let &dir=expand("$HOME/.swap")
+]])
 -- terminal
 vim.cmd([[
 autocmd TermOpen * startinsert
