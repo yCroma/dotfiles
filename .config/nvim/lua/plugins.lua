@@ -344,4 +344,8 @@ return require('packer').startup(function()
 
   -- task runner
   use('thinca/vim-quickrun')
+  use({
+    'skanehira/command.vim',
+    requires = { 'vim-denops/denops.vim' },
+  })
 end)

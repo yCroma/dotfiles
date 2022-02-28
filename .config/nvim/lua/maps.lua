@@ -134,6 +134,9 @@ vim.api.nvim_set_keymap(
   opts
 )
 
+-- command.vim
+vim.api.nvim_set_keymap('n', '<Space>c', ':CommandBufferOpen<CR>', opts)
+
 -- outliner
 vim.api.nvim_set_keymap('n', '<Space>st', ':SymbolsOutline<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space>so', ':SymbolsOutline<CR>', { noremap = true, silent = true })
