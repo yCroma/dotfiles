@@ -390,6 +390,7 @@ require('scrollbar').setup({
     'NvimTree',
     'lir',
     'packer',
+    'lsp-installer',
     'Outline',
     'git',
   },
