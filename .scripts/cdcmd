@@ -1,0 +1,8 @@
+#!/bin/zsh
+if [[ $1 = "" ]]; then # 引数がない場合
+  echo "Error : Requires an argument" 1>&2
+elif [[ $# -gt 1 ]]; then # 引数が複数の場合
+  echo "Error : Too many arguments" 1>&2
+else
+  cd $1
+fi

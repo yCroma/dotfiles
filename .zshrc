@@ -158,6 +158,7 @@ alias la="ls -A"
 alias lal="ls -al"
 alias tmux="tmux -u"
 alias wslopen="bash ~/dotfiles/.scripts/wslopen"
+alias cdcmd="source ~/dotfiles/.scripts/cdcmd"
 
 # os依存
 case ${OSTYPE} in
