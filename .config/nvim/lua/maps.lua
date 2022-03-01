@@ -140,6 +140,13 @@ vim.api.nvim_set_keymap(
   opts
 )
 
+-- startify
+vim.api.nvim_set_keymap('n', '<Space>S', ':Startify<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>ss', ':SSave ', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<Space>sd', ':SDelete ', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<Space>sl', ':SLoad ', { noremap = true, silent = false })
+vim.api.nvim_set_keymap('n', '<Space>sc', ':SClose<CR>', { noremap = true, silent = false })
+
 -- command.vim
 vim.api.nvim_set_keymap('n', '<Space>c', ':CommandBufferOpen<CR>', opts)
 

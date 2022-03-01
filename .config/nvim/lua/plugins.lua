@@ -112,6 +112,9 @@ return require('packer').startup(function()
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
   })
+  -- startup
+  use('mhinz/vim-startify')
+
 
   -- tree filer
   use({

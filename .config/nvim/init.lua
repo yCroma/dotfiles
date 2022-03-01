@@ -106,6 +106,45 @@ augroup FormatAutogroup
 augroup END
 ]])
 
+-- startify
+vim.cmd([[
+function! s:gitModified()
+    let files = systemlist('git ls-files -m 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+" same as above, but show untracked files, honouring .gitignore
+function! s:gitUntracked()
+    let files = systemlist('git ls-files -o --exclude-standard 2>/dev/null')
+    return map(files, "{'line': v:val, 'path': v:val}")
+endfunction
+
+let g:startify_custom_header = [
+          \ '           ______                          _          _    ___         ',
+          \ '    __  __/ ____/________  ____ ___  ____ ( )_____   | |  / (_)___ ___ ',
+          \ '   / / / / /   / ___/ __ \/ __ `__ \/ __ `|// ___/   | | / / / __ `__ \',
+          \ '  / /_/ / /___/ /  / /_/ / / / / / / /_/ / (__  )    | |/ / / / / / / /',
+          \ '  \__, /\____/_/   \____/_/ /_/ /_/\__,_/ /____/     |___/_/_/ /_/ /_/ ',
+          \ ' /____/                                                                ',
+          \ ]
+
+let g:startify_files_number = 5
+let g:startify_bookmarks = [
+  \ $HOME."/dotfiles" ,
+  \ $HOME."/dotfiles/.config/nvim" ,
+  \ ]
+
+let g:startify_lists = [
+  \ { 'type': 'dir',       'header': ['   MRU '. getcwd()] },
+  \ { 'type': 'files', 'header': ['   MRU']      },
+  \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+  \ { 'type': function('s:gitModified'),  'header': ['   git modified']},
+  \ { 'type': function('s:gitUntracked'), 'header': ['   git untracked']},
+  \ { 'type': 'sessions',  'header': ['   Sessions']       },
+  \ { 'type': 'commands',  'header': ['   Commands']       },
+  \ ]
+]])
+
 -- devicons
 require('nvim-web-devicons').setup({
   -- your personnal icons can go here (to override)
