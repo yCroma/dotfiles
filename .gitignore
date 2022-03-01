@@ -8,6 +8,7 @@
 .config/coc/lists
 .config/coc/list-location-history.json
 .config/filezilla/
+.config/nvim/plugin/
 .netrwhist
 .vim/after/
 .vim/colors/*
