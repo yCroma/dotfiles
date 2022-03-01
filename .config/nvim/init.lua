@@ -166,7 +166,7 @@ require('nvim-web-devicons').setup({
 require('lualine').setup({
   options = {
     icons_enabled = true,
-    theme = 'sonokai',
+    theme = 'auto',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {}, -- Filetypes to disable lualine for.
