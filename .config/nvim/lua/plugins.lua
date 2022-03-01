@@ -112,6 +112,12 @@ return require('packer').startup(function()
       { 'kyazdani42/nvim-web-devicons', opt = true },
     },
   })
+  -- tab line
+  use({
+    'romgrk/barbar.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+  })
+
   -- startup
   use('mhinz/vim-startify')
 
