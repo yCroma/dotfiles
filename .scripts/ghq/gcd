@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+destination_dir="$(ghq root)/$(ghq list | fzf --height 10%)"
+repo_name=${destination_dir##*/}
+
+if [ -n "$repo_name" ]; then
+    echo $destination_dir
+    cd $destination_dir
+fi
+
