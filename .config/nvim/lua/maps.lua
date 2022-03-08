@@ -20,9 +20,6 @@ vim.api.nvim_set_keymap('n', '^', '0^', opts)
 vim.api.nvim_set_keymap('n', '<C-i>', '<C-i>zz', opts)
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', opts)
 
-vim.api.nvim_set_keymap('n', '[b', ':bpre<CR>', opts)
-vim.api.nvim_set_keymap('n', ']b', ':bnext<CR>', opts)
-
 vim.api.nvim_set_keymap('n', '[t', ':tabprevious<CR>', opts)
 vim.api.nvim_set_keymap('n', ']t', ':tabnext<CR>', opts)
 
@@ -35,6 +32,11 @@ vim.api.nvim_set_keymap('t', '<C-w>[', '<C-\\><C-n>:bpre<CR>', opts)
 vim.api.nvim_set_keymap('t', '<C-w>]', '<C-\\><C-n>:bnext<CR>', opts)
 
 -- plugins
+-- barbar
+vim.api.nvim_set_keymap('n', '[b', ':BufferPrevious<CR>', opts)
+vim.api.nvim_set_keymap('n', ']b', ':BufferNext<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>bc', ':BufferClose<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>bw', ':BufferWipeout<CR>', opts)
 -- telescope
 vim.api.nvim_set_keymap(
   'n',
