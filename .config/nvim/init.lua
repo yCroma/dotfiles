@@ -2,7 +2,10 @@
 require('indent')
 require('maps')
 require('fold')
-require('plugins')
+require('plugins.load')
+require('plugins.lualine')
+require('plugins.nvim-tree')
+require('plugins.fern')
 
 vim.cmd('filetype plugin indent on')
 
@@ -99,12 +102,15 @@ augroup END')
 ]])
 
 -- formatter
-vim.cmd([[
+vim.api.nvim_exec(
+  [[
 augroup FormatAutogroup
   autocmd!
-  autocmd BufWritePost * FormatWrite
+  autocmd BufWritePost *.js,*.rs,*.lua FormatWrite
 augroup END
-]])
+]],
+  true
+)
 
 -- startify
 vim.cmd([[
@@ -132,6 +138,7 @@ let g:startify_files_number = 5
 let g:startify_bookmarks = [
   \ $HOME."/dotfiles" ,
   \ $HOME."/dotfiles/.config/nvim" ,
+  \ $HOME."/.local/share/nvim/site/pack/packer/start"
   \ ]
 
 let g:startify_lists = [
@@ -144,6 +151,14 @@ let g:startify_lists = [
   \ { 'type': 'commands',  'header': ['   Commands']       },
   \ ]
 ]])
+
+-- vimagit
+vim.g['magit_default_show_all_files'] = 2
+vim.g['magit_default_fold_level'] = 1
+vim.g['magit_auto_foldopen'] = 0
+
+vim.g['magit_folding_open_mapping'] = { 'l', 'zo', 'zO' }
+vim.g['magit_folding_close_mapping'] = { 'h', 'zc', 'zC' }
 
 -- devicons
 require('nvim-web-devicons').setup({
@@ -162,34 +177,15 @@ require('nvim-web-devicons').setup({
   -- will get overriden by `get_icons` option
   default = true,
 })
--- statusline
-require('lualine').setup({
-  options = {
-    icons_enabled = true,
-    theme = 'auto',
-    component_separators = { left = '', right = '' },
-    section_separators = { left = '', right = '' },
-    disabled_filetypes = {}, -- Filetypes to disable lualine for.
-    always_divide_middle = true, -- When set to true, left sections i.e. 'a','b' and 'c'
-  },
-  sections = {
-    lualine_a = { 'mode' },
-    lualine_b = { 'branch', 'diff', 'diagnostics' },
-    lualine_c = { 'filename' },
-    lualine_x = { 'encoding', 'fileformat', 'filetype' },
-    lualine_y = { 'progress' },
-    lualine_z = { 'location' },
-  },
-  inactive_sections = {
-    lualine_a = {},
-    lualine_b = {},
-    lualine_c = { 'filename' },
-    lualine_x = { 'location' },
-    lualine_y = {},
-    lualine_z = {},
-  },
-  extensions = {},
-})
+-- local devicons = require('nvim-web-devicons')
+-- local icons = devicons.get_icons()
+-- print(devicons.get_icon('test.tsx'))
+
+-- for t, val in pairs(icons) do
+--   for k, v in pairs(val) do
+--     print(k, v)
+--   end
+-- end
 require('nvim_comment').setup()
 
 -- tab line
