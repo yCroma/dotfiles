@@ -20,6 +20,7 @@ vim.api.nvim_set_keymap('n', '^', '0^', opts)
 vim.api.nvim_set_keymap('n', '<C-i>', '<C-i>zz', opts)
 vim.api.nvim_set_keymap('n', '<C-o>', '<C-o>zz', opts)
 
+vim.api.nvim_set_keymap('n', '<Space>tn', ':tabnew<CR>', opts)
 vim.api.nvim_set_keymap('n', '[t', ':tabprevious<CR>', opts)
 vim.api.nvim_set_keymap('n', ']t', ':tabnext<CR>', opts)
 
@@ -32,6 +33,9 @@ vim.api.nvim_set_keymap('t', '<C-w>[', '<C-\\><C-n>:bpre<CR>', opts)
 vim.api.nvim_set_keymap('t', '<C-w>]', '<C-\\><C-n>:bnext<CR>', opts)
 
 -- plugins
+-- vimagit
+vim.api.nvim_set_keymap('n', '<Space>mg', ':Magit<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>mo', ':MagitOnly<CR>', opts)
 -- barbar
 vim.api.nvim_set_keymap('n', '[b', ':BufferPrevious<CR>', opts)
 vim.api.nvim_set_keymap('n', ']b', ':BufferNext<CR>', opts)
@@ -106,13 +110,29 @@ vim.api.nvim_set_keymap(
 )
 
 -- lir.nvim
-vim.api.nvim_set_keymap('n', '<Space>ef', [[<Cmd>execute 'e ' .. expand('%:p:h')<CR>]], { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space>eF', [[<Cmd>execute 'botright vsp ' .. getcwd()<CR>]], { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space>es', [[<Cmd>execute 'sp ' .. getcwd()<CR>]], { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space>eS', [[<Cmd>execute 'topleft sp ' .. getcwd()<CR>]], { noremap = true })
+-- vim.api.nvim_set_keymap(
+--   'n',
+--   '<Space>ef',
+--   ':lua require("nvim-tree").open_replacing_current_buffer()<CR>',
+--   { noremap = true }
+-- )
+-- vim.api.nvim_set_keymap(
+--   'n',
+--   '<Space>eF',
+--   ':botright vsp lua require("nvim-tree").open_replacing_current_buffer()<CR>',
+--   { noremap = true }
+-- )
+-- vim.api.nvim_set_keymap('n', '<Space>ef', [[<Cmd>execute 'e ' .. expand('%:p:h')<CR>]], { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<Space>eF', [[<Cmd>execute 'botright vsp ' .. getcwd()<CR>]], { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<Space>es', [[<Cmd>execute 'sp ' .. getcwd()<CR>]], { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<Space>eS', [[<Cmd>execute 'topleft sp ' .. getcwd()<CR>]], { noremap = true })
 
 -- nvim-tree
-vim.api.nvim_set_keymap('n', '<Space>ei', ':NvimTreeToggle<cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>ei', ':lua require("utils").toggle_tree()<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>ef', ':lua require("utils").toggle_vinegar()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Space>eF', ':lua require("utils").toggle_vinegar_botright()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Space>es', ':lua require("utils").toggle_vinegar_split()<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Space>eS', ':lua require("utils").toggle_vinegar_topleft()<CR>', { noremap = true })
 
 -- gitsigns
 -- stylua: ignore <start>
