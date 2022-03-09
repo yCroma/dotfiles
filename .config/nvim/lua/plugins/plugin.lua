@@ -248,10 +248,8 @@ return require('packer').startup(function()
     end,
   })
   use({ 'jreybert/vimagit' })
-
-  use({
-    'lambdalisue/gina.vim',
-  })
+  use({ 'lambdalisue/gina.vim' })
+  use({ 'kdheepak/lazygit.nvim' })
 
   -- nvim-tmux-navigation
   use({
@@ -318,5 +316,13 @@ return require('packer').startup(function()
   use({
     'skanehira/command.vim',
     requires = { 'vim-denops/denops.vim' },
+  })
+
+  -- terminal
+  use({
+    'akinsho/toggleterm.nvim',
+    config = function()
+      require('toggleterm').setup({})
+    end,
   })
 end)

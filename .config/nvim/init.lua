@@ -1,11 +1,9 @@
 -- default
+require('plugins')
 require('indent')
+require('utils')
 require('maps')
 require('fold')
-require('plugins.load')
-require('plugins.lualine')
-require('plugins.nvim-tree')
-require('plugins.fern')
 
 vim.cmd('filetype plugin indent on')
 
