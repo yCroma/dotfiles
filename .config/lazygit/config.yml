@@ -1,0 +1,14 @@
+gui:
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - white
+      - bold
+    inactiveBorderColor:
+      - green
+    optionsTextColor:
+      - blue
+    selectedLineBgColor:
+      - underline
+    selectedRangeBgColor:
+      - underline
