@@ -489,6 +489,9 @@ require('scrollbar').setup({
     'lsp-installer',
     'Outline',
     'git',
+    'diff',
+    'gina-status',
+    'gina-commit',
     'startify',
   },
 })
