@@ -51,7 +51,7 @@ require('nvim-tree').setup({
       custom_only = false,
       list = {
         { key = { 'o', '<CR>' }, action = 'edit_in_place' },
-        { key = { 'l' }, action = 'edit' },
+        { key = { 'l', '<2-LeftMouse>' }, action = 'edit' },
         { key = { 'h' }, action = 'close_node', mode = 'n' },
         { key = { '@' }, action = 'cd', mode = 'n' },
       },
