@@ -132,7 +132,10 @@ ins_left({
   color = { fg = colors.magenta, gui = 'bold' },
 })
 
-ins_left({ 'location' })
+ins_left({
+  'location',
+  cond = conditions.hide_in_width,
+})
 
 -- ins_left({ 'progress', color = { fg = colors.fg, gui = 'bold' } })
 
@@ -174,6 +177,7 @@ ins_left({
     return msg
   end,
   icon = ' LSP:',
+  cond = conditions.hide_in_width,
   color = { fg = '#ffffff', gui = 'bold' },
 })
 
