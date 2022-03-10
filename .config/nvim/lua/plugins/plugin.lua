@@ -42,58 +42,7 @@ return require('packer').startup(function()
   use({ 'simrat39/symbols-outline.nvim', config = function() end })
 
   -- formatter
-  use({
-    'mhartington/formatter.nvim',
-    config = function()
-      require('formatter').setup({
-        filetype = {
-          html = {
-            function()
-              return {
-                exe = 'prettier',
-                args = {
-                  '--stdin-filepath',
-                  vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                  '--parser html',
-                },
-                stdin = true,
-              }
-            end,
-          },
-          json = {
-            function()
-              return {
-                exe = 'prettier',
-                args = {
-                  '--stdin-filepath',
-                  vim.fn.fnameescape(vim.api.nvim_buf_get_name(0)),
-                  '--double-quote',
-                },
-                stdin = true,
-              }
-            end,
-          },
-          lua = {
-            function()
-              return {
-                exe = 'stylua',
-                args = {
-                  '--column-width 120 '
-                    .. '--line-endings Unix '
-                    .. '--indent-type Spaces '
-                    .. '--indent-width 2 '
-                    .. '--quote-style AutoPreferSingle '
-                    .. '--call-parentheses Always ',
-                  '-',
-                },
-                stdin = true,
-              }
-            end,
-          },
-        },
-      })
-    end,
-  })
+  use({ 'mhartington/formatter.nvim' })
 
   -- Post-install/update hook with neovim command
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
