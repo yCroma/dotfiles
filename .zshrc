@@ -133,6 +133,7 @@ alias vie='vim -c "Fern ."'
 alias vic='vim -c "tabnew"'
 alias vit='vim -c "tabnew"'
 alias vimo="vim -c MagitOnly"
+alias neogit="nvim -c MagitOnly"
 alias ide='vim -c "Fern . -drawer -toggle"'
 alias gpom='git pull origin master'
 alias gread="zsh ~/dotfiles/.scripts/ghq/gread"
