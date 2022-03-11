@@ -1,3 +1,5 @@
 require('plugins.plugin')
+require('plugins.jaq-nvim')
 require('plugins.lualine')
 require('plugins.nvim-tree')
+require('plugins.null-ls')
