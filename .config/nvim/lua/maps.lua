@@ -166,6 +166,10 @@ vim.api.nvim_set_keymap(
   opts
 )
 
+-- jaq-nvim
+vim.api.nvim_set_keymap('n', '<Space>jq', ':Jaq quickfix<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>jt', ':Jaq term<CR>', { noremap = true, silent = true })
+
 -- startify
 vim.api.nvim_set_keymap('n', '<Space>S', ':Startify<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Space>ss', ':SSave ', { noremap = true, silent = false })

@@ -261,6 +261,7 @@ return require('packer').startup(function()
   })
 
   -- task runner
+  use({ 'is0n/jaq-nvim' })
   use('thinca/vim-quickrun')
   use({
     'skanehira/command.vim',
