@@ -42,7 +42,7 @@ return require('packer').startup(function()
   use({ 'simrat39/symbols-outline.nvim', config = function() end })
 
   -- formatter
-  use({ 'mhartington/formatter.nvim' })
+  use({ 'jose-elias-alvarez/null-ls.nvim' })
 
   -- Post-install/update hook with neovim command
   use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })

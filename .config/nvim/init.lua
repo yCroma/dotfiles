@@ -99,17 +99,6 @@ autocmd!
 augroup END')
 ]])
 
--- formatter
-vim.api.nvim_exec(
-  [[
-augroup FormatAutogroup
-  autocmd!
-  autocmd BufWritePost * FormatWrite
-augroup END
-]],
-  true
-)
-
 -- startify
 vim.cmd([[
 function! s:gitModified()
