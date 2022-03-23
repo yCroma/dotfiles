@@ -252,7 +252,7 @@ local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local server_available, requested_server = lsp_installer_servers.get_server('rust_analyzer')
 if server_available then
   requested_server:on_ready(function()
-    local opts = { 'bashls', 'html', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls' }
+    local opts = { 'bashls', 'html', 'ocamllsp', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls' }
     requested_server:setup(opts)
     opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   end)
@@ -311,6 +311,13 @@ lsp_installer.on_server_ready(function(server)
   local server_opts = {
     -- Provide settings that should only apply to the "eslintls" server
     ['eslintls'] = function()
+      default_opts.settings = {
+        format = {
+          enable = true,
+        },
+      }
+    end,
+    ['ocamllsp'] = function()
       default_opts.settings = {
         format = {
           enable = true,
