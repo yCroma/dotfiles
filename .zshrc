@@ -8,8 +8,9 @@
 export EDITOR=vim
 export CARGO=$HOME/.cargo
 export GOPATH=$HOME/go
+export OPAM=$HOME/.opam/default
 export LOCAL=$HOME/.local
-export PATH=$PATH:$HOME/go/bin:$GOPATH/bin:$CARGO/bin:$LOCAL/bin
+export PATH=$PATH:$HOME/go/bin:$GOPATH/bin:$CARGO/bin:$LOCAL/bin:$OPAM/bin
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
     --layout=reverse \
@@ -189,3 +190,5 @@ chpwd() {
 
 # }}}
 
+# opam configuration
+[[ ! -r /Users/kuroumayuki/.opam/opam-init/init.zsh ]] || source /Users/kuroumayuki/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
