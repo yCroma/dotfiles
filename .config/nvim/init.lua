@@ -302,42 +302,26 @@ end
 -- lsp setup (for path injection)
 local lsp_installer = require('nvim-lsp-installer')
 lsp_installer.on_server_ready(function(server)
-  -- Specify the default options which we'll use to setup all servers
-  local default_opts = {
-    on_attach = on_attach,
-  }
+  local opts = {}
 
-  -- Now we'll create a server_opts table where we'll specify our custom LSP server configuration
-  local server_opts = {
-    -- Provide settings that should only apply to the "eslintls" server
-    ['eslintls'] = function()
-      default_opts.settings = {
-        format = {
-          enable = true,
+  if server.name == 'clangd' then
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.offsetEncoding = { 'utf-16' }
+    opts.capabilities = capabilities
+  end
+  if server.name == 'sumneko_lua' then
+    opts.settings = {
+      Lua = {
+        diagnostics = {
+          globals = { 'vim', 'use' },
         },
-      }
-    end,
-    ['ocamllsp'] = function()
-      default_opts.settings = {
-        format = {
-          enable = true,
-        },
-      }
-    end,
-    ['sumneko_lua'] = function()
-      default_opts.settings = {
-        Lua = {
-          diagnostics = {
-            globals = { 'vim', 'use' },
-          },
-        },
-      }
-    end,
-  }
-
-  -- Use the server's custom settings, if they exist, otherwise default to the default options
-  local server_options = server_opts[server.name] and server_opts[server.name]() or default_opts
-  server:setup(server_options)
+      },
+    }
+  end
+  -- This setup() function will take the provided server configuration and decorate it with the necessary properties
+  -- before passing it onwards to lspconfig.
+  -- Refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+  server:setup(opts)
 end)
 
 -- complition
