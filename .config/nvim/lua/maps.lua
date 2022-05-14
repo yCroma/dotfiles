@@ -40,6 +40,7 @@ vim.api.nvim_set_keymap('n', '<Space>mo', ':MagitOnly<CR>', opts)
 vim.api.nvim_set_keymap('n', '[b', ':BufferPrevious<CR>', opts)
 vim.api.nvim_set_keymap('n', ']b', ':BufferNext<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Space>bc', ':BufferClose<CR>', opts)
+vim.api.nvim_set_keymap('n', '<Space>bd', ':BufferDelete<CR>', opts)
 vim.api.nvim_set_keymap('n', '<Space>bw', ':BufferWipeout<CR>', opts)
 -- telescope
 vim.api.nvim_set_keymap(
