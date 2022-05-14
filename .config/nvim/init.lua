@@ -303,6 +303,7 @@ end
 local lsp_installer = require('nvim-lsp-installer')
 lsp_installer.on_server_ready(function(server)
   local opts = {}
+  opts.on_attach = on_attach
 
   if server.name == 'clangd' then
     local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -340,6 +341,8 @@ cmp.setup({
     end,
   },
   mapping = {
+    ['<C-n>'] = cmp.mapping(cmp.mapping.select_next_item(), { 'i', 'c' }),
+    ['<C-p>'] = cmp.mapping(cmp.mapping.select_prev_item(), { 'i', 'c' }),
     ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
