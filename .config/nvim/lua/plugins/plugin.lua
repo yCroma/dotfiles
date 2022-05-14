@@ -268,11 +268,9 @@ return require('packer').startup(function()
     requires = { 'vim-denops/denops.vim' },
   })
 
-  -- terminal
+  -- flutter
   use({
-    'akinsho/toggleterm.nvim',
-    config = function()
-      require('toggleterm').setup({})
-    end,
+    'akinsho/flutter-tools.nvim',
+    requires = 'nvim-lua/plenary.nvim',
   })
 end)

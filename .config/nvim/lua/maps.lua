@@ -183,3 +183,7 @@ vim.api.nvim_set_keymap('n', '<Space>c', ':CommandBufferOpen<CR>', opts)
 -- outliner
 vim.api.nvim_set_keymap('n', '<Space>st', ':SymbolsOutline<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space>so', ':SymbolsOutline<CR>', { noremap = true, silent = true })
+-- for flutter
+vim.api.nvim_set_keymap('n', '<Space>ft', ':FlutterOutlineToggle<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Space>fo', ':FlutterOutlineToggle<CR>', { noremap = true, silent = true })
+

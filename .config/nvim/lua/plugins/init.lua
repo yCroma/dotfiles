@@ -1,4 +1,5 @@
 require('plugins.plugin')
+require('plugins.flutter-tools')
 require('plugins.jaq-nvim')
 require('plugins.lualine')
 require('plugins.nvim-tree')
