@@ -33,6 +33,7 @@ vim.g.sonokai_style = 'espresso'
 vim.cmd('colorscheme sonokai')
 
 -- requirements for statusline && buftabline
+vim.opt.laststatus = 3
 vim.opt.cursorline = true
 vim.opt.showtabline = 2
 vim.opt.hidden = true
