@@ -130,10 +130,30 @@ vim.api.nvim_set_keymap(
 
 -- nvim-tree
 vim.api.nvim_set_keymap('n', '<Space>ei', ':lua require("utils").toggle_tree()<CR>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', '<Space>ef', ':lua require("utils").toggle_vinegar()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space>eF', ':lua require("utils").toggle_vinegar_botright()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space>es', ':lua require("utils").toggle_vinegar_split()<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Space>eS', ':lua require("utils").toggle_vinegar_topleft()<CR>', { noremap = true })
+vim.api.nvim_set_keymap(
+  'n',
+  '<Space>ef',
+  ':lua require("utils").toggle_vinegar()<CR>',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'n',
+  '<Space>eF',
+  ':lua require("utils").toggle_vinegar_botright()<CR>',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'n',
+  '<Space>es',
+  ':lua require("utils").toggle_vinegar_split()<CR>',
+  { noremap = true, silent = true }
+)
+vim.api.nvim_set_keymap(
+  'n',
+  '<Space>eS',
+  ':lua require("utils").toggle_vinegar_topleft()<CR>',
+  { noremap = true, silent = true }
+)
 
 -- gitsigns
 -- stylua: ignore <start>
