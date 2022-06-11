@@ -1,3 +1,4 @@
+-- vim.opt.termguicolors = true -- set first, cuz colorscheme with packer must require termguicolors
 -- default
 require('plugins')
 require('indent')
@@ -32,6 +33,7 @@ vim.g.sonokai_style = 'espresso'
 vim.cmd('colorscheme sonokai')
 
 -- requirements for statusline && buftabline
+vim.opt.laststatus = 3
 vim.opt.cursorline = true
 vim.opt.showtabline = 2
 vim.opt.hidden = true
@@ -459,7 +461,7 @@ require('indent_blankline').setup({
 
 -- scroll bar
 local sonokai_configuration = vim.fn['sonokai#get_configuration']()
-local colors = vim.fn['sonokai#get_palette'](sonokai_configuration.style)
+local colors = vim.fn['sonokai#get_palette'](sonokai_configuration.style, sonokai_configuration.colors_override)
 require('scrollbar').setup({
   handle = {
     color = colors.fg[1],

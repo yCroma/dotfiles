@@ -4,7 +4,7 @@
 local lualine = require('lualine')
 
 local sonokai_configuration = vim.fn['sonokai#get_configuration']()
-local sonokai = vim.fn['sonokai#get_palette'](sonokai_configuration.style)
+local sonokai = vim.fn['sonokai#get_palette'](sonokai_configuration.style, sonokai_configuration.colors_override)
 
 local colors = {
   bg = '#393230',
