@@ -187,4 +187,3 @@ vim.api.nvim_set_keymap('n', '<Space>so', ':SymbolsOutline<CR>', { noremap = tru
 -- for flutter
 vim.api.nvim_set_keymap('n', '<Space>ft', ':FlutterOutlineToggle<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Space>fo', ':FlutterOutlineToggle<CR>', { noremap = true, silent = true })
-
