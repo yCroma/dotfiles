@@ -254,7 +254,16 @@ local lsp_installer_servers = require('nvim-lsp-installer.servers')
 local server_available, requested_server = lsp_installer_servers.get_server('rust_analyzer')
 if server_available then
   requested_server:on_ready(function()
-    local opts = { 'bashls', 'html', 'ocamllsp', 'rust_analyzer', 'sumneko_lua', 'tsserver', 'vimls' }
+    local opts = {
+      'bashls',
+      'cssls',
+      'html',
+      'ocamllsp',
+      'rust_analyzer',
+      'sumneko_lua',
+      'tsserver',
+      'vimls',
+    }
     requested_server:setup(opts)
     opts.capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   end)
@@ -307,6 +316,11 @@ lsp_installer.on_server_ready(function(server)
   local opts = {}
   opts.on_attach = on_attach
 
+  if server.name == 'cssls' then
+    local capabilities = vim.lsp.protocol.make_client_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = true
+    opts.capabilities = capabilities
+  end
   if server.name == 'clangd' then
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities.offsetEncoding = { 'utf-16' }
