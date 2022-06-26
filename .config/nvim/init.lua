@@ -279,6 +279,16 @@ end
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  if client.name == 'tsserver' then
+    -- Note when changing !!!
+    -- null-ls.lua uses the following values ( ./lua/plugins/null-ls.lua:13 )
+    -- Whether client.resolved_capabilities.document_formatting
+    --  is true or not
+    client.resolved_capabilities.document_formatting = false
+    -- client.server_capabilities.document_formatting = false
+    -- client.server.documentFormattingProvider = false
+  end
+
   local function buf_set_keymap(...)
     vim.api.nvim_buf_set_keymap(bufnr, ...)
   end
