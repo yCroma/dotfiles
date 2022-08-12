@@ -12,6 +12,9 @@ export OPAM=$HOME/.opam/default
 export FLUTTER=$HOME/.flutter
 export LOCAL=$HOME/.local
 export PATH=$PATH:$HOME/go/bin:$GOPATH/bin:$CARGO/bin:$LOCAL/bin:$OPAM/bin:$FLUTTER/bin
+# middleware
+# lazygit
+export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
 export FZF_DEFAULT_OPTS="\
     --layout=reverse \
